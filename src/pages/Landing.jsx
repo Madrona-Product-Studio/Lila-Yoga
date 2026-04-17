@@ -225,9 +225,6 @@ export default function Landing() {
             @media (max-width: 860px) {
               section > div[style*="grid"] { grid-template-columns: repeat(2, 1fr) !important; }
             }
-            @media (max-width: 500px) {
-              section > div[style*="grid"] { grid-template-columns: 1fr !important; max-width: 320px; margin: 0 auto; }
-            }
           `}</style>
         </section>
 

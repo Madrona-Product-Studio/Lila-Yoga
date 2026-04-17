@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GLOBAL STYLES — Lila Yoga
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+@import "tailwindcss";
+
+/* ─── Lila Yoga brand palette (synced with src/data/brand.js) ─────────────── */
+@theme {
+  --color-cream: #f5f1ea;
+  --color-warm-white: #faf8f4;
+  --color-stone: #e8e2d9;
+  --color-slate: #3D5A6B;
+  --color-sky-blue: #7BB8D4;
+  --color-ocean-teal: #4A9B9F;
+  --color-sun-salmon: #E8A090;
+  --color-golden-amber: #D4A853;
+  --color-sea-glass: #7BB8A0;
+  --color-dark-ink: #1a2530;
+
+  --font-body: 'Quicksand', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+}
+
+/* ─── Base overrides (applied after Tailwind's Preflight) ───────────────────── */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; font-family: 'Quicksand', sans-serif; }
+  ::selection { background: rgba(123, 184, 212, 0.25); }
+}
+
+/* ─── Reusable utility classes ──────────────────────────────────────────────── */
+.eyebrow {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  display: block; margin-bottom: 16px;
+}
+
+.underline-link {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #1a2530; text-decoration: none;
+  padding-bottom: 3px; border-bottom: 1px solid #1a2530;
+  display: inline-block; transition: opacity 0.2s;
+}
+.underline-link:hover { opacity: 0.55; }

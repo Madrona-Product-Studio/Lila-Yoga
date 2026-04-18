@@ -10,9 +10,12 @@
  */
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { useNavigate as useRouterNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { C, FONTS } from '@data/brand';
 import { TRADITIONS, CARDS, buildScreens, getCardsByTradition } from '@data/teachingsDeck';
+import PrincipleMark from '@components/guide/PrincipleMarks';
+import DeckMark from '@components/guide/DeckMarks';
 
 const SANS = FONTS.body;
 const SCREENS = buildScreens();
@@ -345,6 +348,55 @@ function ConceptsScreen({ tradition }) {
 // CARD SCREEN (two-faced flip card — matches Meditations practice cards)
 // ═══════════════════════════════════════════════════════════════════════════════
 
+function DiamondGlyph({ color, size = 8 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 10 10" fill="none">
+      <rect x="1" y="1" width="8" height="8" stroke={color} strokeWidth="1.5" transform="rotate(45 5 5)" />
+    </svg>
+  );
+}
+
+function DeepDiveSection({ deepDive, color }) {
+  if (!deepDive) return null;
+  const label = deepDive.subtitle ? `Deep Dive · ${deepDive.subtitle}` : 'Deep Dive';
+  return (
+    <div style={{ padding: '18px 22px 0' }}>
+      <div style={{
+        fontSize: 11, fontFamily: SANS, fontWeight: 700,
+        color, letterSpacing: '0.14em',
+        textTransform: 'uppercase', marginBottom: 10,
+        display: 'flex', alignItems: 'center', gap: 5,
+      }}>
+        <DiamondGlyph color={color} />
+        {label}
+      </div>
+      {deepDive.shape === 'list' && deepDive.items && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {deepDive.items.map((item, i) => (
+            <div key={i} style={{ fontSize: 14, fontFamily: SANS, fontWeight: 400, color: '#1C1917', lineHeight: 1.75 }}>
+              <strong>{item.term}</strong>{item.gloss && <em style={{ color: 'rgba(44,36,32,0.5)' }}> ({item.gloss})</em>} — {item.description}
+            </div>
+          ))}
+          {deepDive.closingParagraph && (
+            <div style={{ fontSize: 14, fontFamily: SANS, fontWeight: 400, color: '#1C1917', lineHeight: 1.75, marginTop: 4 }}>
+              {deepDive.closingParagraph}
+            </div>
+          )}
+        </div>
+      )}
+      {deepDive.shape === 'prose' && deepDive.paragraphs && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {deepDive.paragraphs.map((p, i) => (
+            <div key={i} style={{ fontSize: 14, fontFamily: SANS, fontWeight: 400, color: '#1C1917', lineHeight: 1.75 }}>
+              {p.heading && <strong>{p.heading} </strong>}{p.text}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function CardScreen({ card, tradition }) {
   const [flipped, setFlipped] = useState(false);
   const [flipAnimating, setFlipAnimating] = useState(false);
@@ -438,7 +490,7 @@ function CardScreen({ card, tradition }) {
             {card.pronunciation}
           </div>
 
-          {/* Teaching preview */}
+          {/* Teaching overview */}
           <div style={{
             fontSize: 16, fontFamily: SANS, fontWeight: 400,
             color: 'white', opacity: 0.85, lineHeight: 1.75,
@@ -450,8 +502,28 @@ function CardScreen({ card, tradition }) {
 
         <div style={{ flex: 1 }} />
 
+        {/* Quote — editorial close */}
+        {card.quote && (
+          <div style={{ padding: '0 28px 16px', flexShrink: 0 }}>
+            <div style={{ height: '0.5px', background: 'rgba(255,255,255,0.15)', marginBottom: 14 }} />
+            <div style={{
+              fontSize: 13, fontFamily: SANS, fontWeight: 400,
+              color: 'white', opacity: 0.7, fontStyle: 'italic', lineHeight: 1.65, marginBottom: 4,
+            }}>
+              &ldquo;{card.quote}&rdquo;
+            </div>
+            <div style={{
+              fontSize: 9, fontFamily: SANS, fontWeight: 600,
+              color: 'white', opacity: 0.35,
+              letterSpacing: '0.1em', textTransform: 'uppercase',
+            }}>
+              {card.quoteAuthor}
+            </div>
+          </div>
+        )}
+
         {/* Flip arrow */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '12px 28px 28px' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '4px 28px 24px' }}>
           <div style={{ opacity: 0.6 }}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path d="M 20 12 A 8 8 0 1 1 12 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
@@ -468,25 +540,24 @@ function CardScreen({ card, tradition }) {
           position: 'absolute', inset: 0,
           background: '#F7F4EE',
           display: 'flex', flexDirection: 'column',
-          justifyContent: 'center',
-          cursor: 'pointer', overflow: 'hidden',
+          cursor: 'pointer',
           borderRadius: 14,
           border: '0.5px solid rgba(0,0,0,0.08)',
           transform: 'rotateY(180deg)',
           backfaceVisibility: 'hidden',
           WebkitBackfaceVisibility: 'hidden',
-          padding: '0',
         }}
       >
-        {/* Title bar */}
-        <div style={{
-          padding: '20px 22px 14px',
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          gap: 6, flexShrink: 0,
-        }}>
-          <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-            <rect x="1" y="1" width="8" height="8" stroke={tradition.color} strokeWidth="1.5" transform="rotate(45 5 5)" />
-          </svg>
+        {/* Title bar — tappable to flip back */}
+        <div
+          onClick={(e) => { e.stopPropagation(); handleFlip(); }}
+          style={{
+            padding: '20px 22px 14px',
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
+            gap: 6, flexShrink: 0, cursor: 'pointer',
+          }}
+        >
+          <DiamondGlyph color={tradition.color} />
           <div style={{
             fontSize: 13, fontFamily: SANS, fontWeight: 700,
             color: tradition.color, letterSpacing: '0.14em', textTransform: 'uppercase',
@@ -496,12 +567,20 @@ function CardScreen({ card, tradition }) {
         </div>
         <div style={{ height: '0.5px', background: 'rgba(44,36,32,0.05)', margin: '0 22px', flexShrink: 0 }} />
 
-        {/* Content group */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', paddingBottom: 40 }}>
-
-          {/* Origin */}
+        {/* Scrollable content */}
+        <div style={{
+          flex: 1, overflowY: 'auto', paddingBottom: 48,
+          WebkitOverflowScrolling: 'touch',
+        }}
+          onClick={e => e.stopPropagation()}
+        >
+          {/* ORIGIN — quiet label */}
           <div style={{ padding: '14px 22px 0' }}>
-            <div style={{ fontSize: 11, fontFamily: SANS, fontWeight: 600, color: 'rgba(44,36,32,0.35)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 6 }}>
+            <div style={{
+              fontSize: 11, fontFamily: SANS, fontWeight: 600,
+              color: 'rgba(44,36,32,0.35)', letterSpacing: '0.12em',
+              textTransform: 'uppercase', marginBottom: 6,
+            }}>
               Origin
             </div>
             <div style={{ fontSize: 14, fontFamily: SANS, fontWeight: 400, color: '#1C1917', lineHeight: 1.75 }}>
@@ -509,7 +588,10 @@ function CardScreen({ card, tradition }) {
             </div>
           </div>
 
-          {/* On Your Journey */}
+          {/* ◈ DEEP DIVE — tradition-colored, omitted when null */}
+          <DeepDiveSection deepDive={card.deepDive} color={tradition.color} />
+
+          {/* ◈ OUT IN NATURE — tradition-colored */}
           <div style={{ padding: '18px 22px 0' }}>
             <div style={{
               fontSize: 11, fontFamily: SANS, fontWeight: 700,
@@ -517,9 +599,7 @@ function CardScreen({ card, tradition }) {
               textTransform: 'uppercase', marginBottom: 8,
               display: 'flex', alignItems: 'center', gap: 5,
             }}>
-              <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-                <rect x="1" y="1" width="8" height="8" stroke={tradition.color} strokeWidth="1.5" transform="rotate(45 5 5)" />
-              </svg>
+              <DiamondGlyph color={tradition.color} />
               Out in Nature
             </div>
             <div style={{
@@ -529,35 +609,16 @@ function CardScreen({ card, tradition }) {
               {card.journey}
             </div>
           </div>
-
-          {/* Quote */}
-          {card.quote && (
-            <div style={{
-              margin: '18px 22px 0', padding: '18px 0 14px',
-              borderTop: '0.5px solid rgba(44,36,32,0.04)',
-              borderBottom: '0.5px solid rgba(44,36,32,0.04)',
-            }}>
-              <div style={{
-                fontSize: 14, fontFamily: SANS, fontWeight: 400,
-                color: '#1C1917', fontStyle: 'italic', lineHeight: 1.7, marginBottom: 6,
-              }}>
-                &ldquo;{card.quote}&rdquo;
-              </div>
-              <div style={{
-                fontSize: 10, fontFamily: SANS, fontWeight: 400,
-                color: '#8C7B6B', letterSpacing: '0.04em', textTransform: 'uppercase',
-              }}>
-                {card.quoteAuthor}
-              </div>
-            </div>
-          )}
         </div>
 
-        {/* Flip arrow */}
-        <div style={{
-          position: 'absolute', right: 22, bottom: 18,
-          display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer',
-        }}>
+        {/* Flip arrow — fixed at bottom */}
+        <div
+          onClick={(e) => { e.stopPropagation(); handleFlip(); }}
+          style={{
+            position: 'absolute', right: 22, bottom: 18, zIndex: 5,
+            display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer',
+          }}
+        >
           <div style={{ fontSize: 8, fontFamily: SANS, color: '#8C7B6B', opacity: 0.5, letterSpacing: '0.12em', textTransform: 'uppercase' }}>back</div>
           <div style={{ opacity: 0.5 }}>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -576,6 +637,134 @@ function CardScreen({ card, tradition }) {
 // SCREEN RENDERER
 // ═══════════════════════════════════════════════════════════════════════════════
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// CONTINUE SCREEN (end card — mirrors Welcome)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const TEACH_SIBLINGS = [
+  { key: 'meditations', name: 'Meditations', desc: 'Five principles, thirty practices.', route: '/deck', mark: (sz, c) => <PrincipleMark id="presence" size={sz} color={c} /> },
+  { key: 'movements', name: 'Movements', desc: 'The practice of the body.', route: '/movements', mark: (sz, c) => <DeckMark id="arrive" size={sz} color={c} /> },
+  { key: 'body', name: 'Body', desc: 'The body beneath the movement.', route: '/body', mark: (sz, c) => <DeckMark id="body" size={sz} color={c} /> },
+];
+
+function TeachingsContinueScreen() {
+  const nav = useRouterNavigate();
+  return (
+    <div style={{
+      width: '100%', height: '100%',
+      background: '#F7F4EE',
+      display: 'flex', flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '0 36px 48px',
+      position: 'relative', overflow: 'hidden',
+      borderRadius: 14,
+      border: '0.5px solid rgba(0,0,0,0.08)',
+    }}>
+      <div style={{
+        position: 'absolute', bottom: '-5%', left: '50%',
+        transform: 'translateX(-50%)',
+        width: '100%', height: '35%',
+        background: 'radial-gradient(ellipse, rgba(180,100,60,0.05) 0%, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{
+        fontSize: 'clamp(46px, 10vw, 58px)', fontFamily: SANS,
+        color: '#1C1917', fontWeight: 700, lineHeight: 1.0,
+        letterSpacing: '-0.01em', marginBottom: 10,
+        position: 'relative',
+      }}>
+        Continue
+      </div>
+
+      <div style={{
+        fontSize: 15, fontFamily: SANS, fontWeight: 500,
+        color: 'rgba(28,25,23,0.58)', lineHeight: 1.75,
+        marginBottom: 22,
+        position: 'relative',
+      }}>
+        Wisdom is carried forward, not finished.
+      </div>
+
+      <div style={{ position: 'relative', marginBottom: 14 }}>
+        <div style={{
+          fontSize: 15, fontFamily: SANS, fontWeight: 400,
+          color: 'rgba(28,25,23,0.55)', lineHeight: 2.0,
+        }}>
+          carry the teachings that found you,<br />
+          return to the traditions that held,<br />
+          let the wisdom meet the walk.
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div style={{ height: '0.5px', background: 'rgba(28,25,23,0.08)', margin: '20px 0 16px', position: 'relative' }} />
+
+      <div style={{
+        fontSize: 10, fontFamily: SANS,
+        color: 'rgba(28,25,23,0.35)',
+        letterSpacing: '0.22em',
+        textTransform: 'uppercase',
+        marginBottom: 12,
+        position: 'relative',
+      }}>
+        Up next
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 0, position: 'relative' }}>
+        {TEACH_SIBLINGS.map((deck, i) => (
+          <div
+            key={deck.key}
+            onClick={() => nav(deck.route)}
+            style={{
+              display: 'flex', alignItems: 'center', gap: 12,
+              padding: '10px 0',
+              borderTop: i > 0 ? '0.5px solid rgba(28,25,23,0.08)' : 'none',
+              cursor: 'pointer',
+            }}
+          >
+            <div style={{ width: 28, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {deck.mark(22, 'rgba(28,25,23,0.4)')}
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 14, fontFamily: SANS, fontWeight: 600, color: '#1C1917', letterSpacing: '0.02em' }}>
+                {deck.name}
+              </div>
+              <div style={{ fontSize: 11, fontFamily: SANS, color: 'rgba(28,25,23,0.45)' }}>
+                {deck.desc}
+              </div>
+            </div>
+            <div style={{ fontSize: 16, color: 'rgba(28,25,23,0.25)' }}>→</div>
+          </div>
+        ))}
+      </div>
+
+      <div
+        onClick={() => nav('/')}
+        style={{
+          fontSize: 12, fontFamily: SANS,
+          color: 'rgba(28,25,23,0.35)',
+          letterSpacing: '0.04em',
+          marginTop: 14,
+          cursor: 'pointer',
+          position: 'relative',
+        }}
+      >
+        ◈ All card decks
+      </div>
+
+      <div style={{
+        position: 'absolute', bottom: 36, left: 36,
+        fontSize: 12, fontFamily: SANS,
+        color: 'rgba(28,25,23,0.25)',
+        letterSpacing: '0.04em',
+      }}>
+        The walk continues.
+      </div>
+    </div>
+  );
+}
+
 function renderScreen(scr) {
   if (!scr) return null;
   if (scr.type === 'cover') return <CoverScreen />;
@@ -583,6 +772,7 @@ function renderScreen(scr) {
   if (scr.type === 'chapter') return <TraditionScreen key={`ch-${scr.traditionIndex}`} tradition={scr.tradition} />;
   if (scr.type === 'concepts') return <ConceptsScreen key={`toc-${scr.traditionIndex}`} tradition={scr.tradition} />;
   if (scr.type === 'card') return <CardScreen key={`${scr.traditionIndex}-${scr.cardIndex}`} card={scr.card} tradition={scr.tradition} />;
+  if (scr.type === 'continue') return <TeachingsContinueScreen />;
   return null;
 }
 

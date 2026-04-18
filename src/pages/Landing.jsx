@@ -36,14 +36,6 @@ const DECKS = [
     Cover: () => <MeditationsCover />,
   },
   {
-    key: 'teachings',
-    route: '/teachings',
-    name: 'Teachings',
-    subtitle: 'Conceptual \u00b7 Traditional',
-    desc: '30 concept cards \u2014 what the traditions believe.',
-    Cover: () => <TeachingsCover />,
-  },
-  {
     key: 'movements',
     route: '/movements',
     name: 'Movements',
@@ -64,6 +56,14 @@ const DECKS = [
     subtitle: 'Intellectual \u00b7 Scientific',
     desc: '47 cards on movement science and the body.',
     Cover: () => <BodyCover />,
+  },
+  {
+    key: 'teachings',
+    route: '/teachings',
+    name: 'Teachings',
+    subtitle: 'Conceptual \u00b7 Traditional',
+    desc: '30 concept cards \u2014 what the traditions believe.',
+    Cover: () => <TeachingsCover />,
   },
 ];
 

@@ -252,6 +252,20 @@ export default function Landing() {
             >
               lilatrips.com
             </a>
+            {' · '}
+            Created by{' '}
+            <a
+              href="https://madronaproductstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: '#D85A30',
+                fontWeight: 500,
+                textDecoration: 'none',
+              }}
+            >
+              Madrona Product Studio
+            </a>
           </div>
         </footer>
       </div>

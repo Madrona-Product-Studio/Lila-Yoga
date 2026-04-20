@@ -252,7 +252,12 @@ export default function Landing() {
             >
               lilatrips.com
             </a>
-            {' · '}
+          </div>
+          <div style={{
+            fontSize: 12, fontFamily: SANS,
+            color: 'rgba(26,37,48,0.35)',
+            marginTop: 8,
+          }}>
             Created by{' '}
             <a
               href="https://madronaproductstudio.com"

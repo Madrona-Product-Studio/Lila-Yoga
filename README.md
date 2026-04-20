@@ -39,3 +39,4 @@ npm run preview
 - **Card examples (Teachings)**: The `journey` fields in `src/data/teachingsDeck.js` contain trail/trip-specific language. These should be reviewed and softened for the yoga context.
 - **Landing page copy**: Hero tagline, about section, and CTA text are placeholder. Each is marked with `{/* TODO */}` comments in `src/pages/Landing.jsx`.
 - **Analytics**: Needs its own GA4 property (separate from Lila Trips G-H3TCF22GPL). Placeholder comment in `index.html`.
+

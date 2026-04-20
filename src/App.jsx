@@ -4,6 +4,7 @@ import Deck from '@pages/Deck';
 import Teachings from '@pages/Teachings';
 import MovementsL1 from '@pages/MovementsL1';
 import MovementsL2 from '@pages/MovementsL2';
+import FeedbackWidget from '@components/FeedbackWidget';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/movements" element={<MovementsL1 />} />
         <Route path="/body" element={<MovementsL2 />} />
       </Routes>
+      <FeedbackWidget source="Lila Yoga" />
     </BrowserRouter>
   );
 }

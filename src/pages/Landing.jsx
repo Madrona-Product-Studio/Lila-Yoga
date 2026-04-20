@@ -2,8 +2,7 @@
  * Landing.jsx — Lila Yoga home page
  * ══════════════════════════════════
  *
- * Hero + 4-deck grid (adapted from Lila Trips PracticeLibrary) + About + Footer.
- * All copy marked TODO for Charlie.
+ * Hero + 4-deck grid + Footer.
  */
 
 import { useRef, useEffect, useState } from 'react';

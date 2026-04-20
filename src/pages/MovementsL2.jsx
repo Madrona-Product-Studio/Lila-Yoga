@@ -112,6 +112,7 @@ const config = {
   countLabel: `${MOVEMENT_DECK_L2.length} chapters \u00b7 ${getTotalCardsL2()} cards`,
   title: 'Lila Body',
   description: 'Anatomy, movement science, and the patterns that modern life creates in your body.',
+  canonical: 'https://lila.yoga/body',
   markIds: L2_MARK_IDS,
   chapters: MOVEMENT_DECK_L2,
   coverOverride: CoverScreen,

@@ -1167,7 +1167,7 @@ export default function Movements({ screens: screensProp, deckConfig } = {}) {
       <Helmet>
         <title>{config.title}</title>
         <meta name="description" content={config.description} />
-        <link rel="canonical" href="https://lila.yoga/movements" />
+        <link rel="canonical" href={config.canonical || 'https://lila.yoga/movements'} />
       </Helmet>
 
       {/* Keyframes + desktop-only arrows */}

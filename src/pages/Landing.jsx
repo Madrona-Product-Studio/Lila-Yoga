@@ -28,14 +28,6 @@ const ASPECT = SRC_H / SRC_W; // 1.8
 
 const DECKS = [
   {
-    key: 'meditations',
-    route: '/deck',
-    name: 'Meditations',
-    subtitle: 'Reflective \u00b7 Spiritual',
-    desc: '30 practice cards across five wisdom traditions.',
-    Cover: () => <MeditationsCover />,
-  },
-  {
     key: 'movements',
     route: '/movements',
     name: 'Movements',
@@ -64,6 +56,14 @@ const DECKS = [
     subtitle: 'Conceptual \u00b7 Traditional',
     desc: '30 concept cards \u2014 what the traditions believe.',
     Cover: () => <TeachingsCover />,
+  },
+  {
+    key: 'meditations',
+    route: '/deck',
+    name: 'Meditations',
+    subtitle: 'Reflective \u00b7 Spiritual',
+    desc: '30 practice cards across five wisdom traditions.',
+    Cover: () => <MeditationsCover />,
   },
 ];
 

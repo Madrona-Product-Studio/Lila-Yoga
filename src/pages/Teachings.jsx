@@ -16,6 +16,7 @@ import { C, FONTS } from '@data/brand';
 import { TRADITIONS, CARDS, buildScreens, getCardsByTradition } from '@data/teachingsDeck';
 import PrincipleMark from '@components/guide/PrincipleMarks';
 import DeckMark from '@components/guide/DeckMarks';
+import FeedbackWidget from '@components/FeedbackWidget';
 
 const SANS = FONTS.body;
 const SCREENS = buildScreens();
@@ -761,6 +762,7 @@ function TeachingsContinueScreen() {
       }}>
         The walk continues.
       </div>
+      <FeedbackWidget source="Lila Yoga" />
     </div>
   );
 }

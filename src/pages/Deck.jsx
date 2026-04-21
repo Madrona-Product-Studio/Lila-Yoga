@@ -19,6 +19,7 @@ import { CARDS, CARD_PRINCIPLES } from '@data/cardDeck';
 import { C, FONTS } from '@data/brand';
 import PrincipleMark from '@components/guide/PrincipleMarks';
 import DeckMark from '@components/guide/DeckMarks';
+import FeedbackWidget from '@components/FeedbackWidget';
 
 const SERIF = FONTS.serif;
 const SANS = FONTS.body;
@@ -550,6 +551,7 @@ function MeditationsContinueScreen() {
       }}>
         The walk continues.
       </div>
+      <FeedbackWidget source="Lila Yoga" />
     </div>
   );
 }

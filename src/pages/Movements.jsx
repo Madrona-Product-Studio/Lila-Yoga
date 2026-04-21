@@ -17,6 +17,7 @@ import { C, FONTS } from '@data/brand';
 import MovementTabs from '@components/movements/MovementTabs';
 import DeckMark from '@components/guide/DeckMarks';
 import PrincipleMark from '@components/guide/PrincipleMarks';
+import FeedbackWidget from '@components/FeedbackWidget';
 
 const SANS = FONTS.body;
 
@@ -1043,6 +1044,7 @@ function ContinueScreen({ continueConfig }) {
       }}>
         The walk continues.
       </div>
+      <FeedbackWidget source="Lila Yoga" />
     </div>
   );
 }

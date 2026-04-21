@@ -122,8 +122,8 @@ function DeckTile({ deck }) {
 
       {/* Labels */}
       <div style={{
-        fontSize: 18, fontFamily: SERIF, fontWeight: 400,
-        color: C.darkInk, marginTop: 12,
+        fontSize: 16, fontFamily: SANS, fontWeight: 600,
+        color: C.darkInk, marginTop: 12, letterSpacing: '0.02em',
       }}>
         {name}
       </div>

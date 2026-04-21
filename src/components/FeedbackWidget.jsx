@@ -2,21 +2,21 @@
 // FEEDBACK WIDGET — structured sentiment + tags + open text
 // ═══════════════════════════════════════════════════════════════════════════════
 //
-// Sends structured feedback via Web3Forms to feedback@madronaproduct.com.
-// Reusable across all Madrona Product Studio apps.
+// Sends structured feedback via Resend API (lilatrips.com/api/send-feedback).
+// Reusable across all Madrona Product Studio apps — all apps call the same endpoint.
 //
 // Usage:
 //   <FeedbackWidget source="Lila Trips" />
-//   <FeedbackWidget source="Utah Trip" accessKey="..." />
+//   <FeedbackWidget source="Utah Trip" />
 //
 // Props:
-//   source    — app name in email subject (required)
-//   accessKey — Web3Forms access key (defaults to shared key)
+//   source    — app name included in the email subject (required)
 //   className — optional, for position/z-index overrides
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-const WEB3FORMS_KEY = '0d48df75-d380-4710-817b-4bf6c56b7386';
+// Feedback API endpoint — hosted on lilatrips.com, shared across all Madrona apps
+const FEEDBACK_API = 'https://www.lilatrips.com/api/send-feedback';
 
 // ─── Sentiment-conditional content ──────────────────────────────────────────
 
@@ -118,7 +118,7 @@ function usePrefersReducedMotion() {
 // COMPONENT
 // ═══════════════════════════════════════════════════════════════════════════════
 
-export default function FeedbackWidget({ source = 'Madrona App', accessKey = WEB3FORMS_KEY, className }) {
+export default function FeedbackWidget({ source = 'Madrona App', className }) {
   const [open, setOpen] = useState(false);
   const [sentiment, setSentiment] = useState(null); // 'loved' | 'okay' | 'off'
   const [tag, setTag] = useState(null);
@@ -179,23 +179,18 @@ export default function FeedbackWidget({ source = 'Madrona App', accessKey = WEB
     setSubmitting(true);
     setError(null);
 
-    // Build formatted plain-text message for email
-    const lines = [
-      `Sentiment: ${SENTIMENT_LABELS[sentiment]}`,
-      tag ? `Tag: ${tag}` : null,
-      `Page: ${window.location.pathname}`,
-      '',
-      text.trim() ? text.trim() : '(no comment)',
-    ].filter(Boolean).join('\n');
-
     try {
-      const formData = new FormData();
-      formData.append('access_key', accessKey);
-      formData.append('subject', `${source} — Feedback (${SENTIMENT_LABELS[sentiment].toLowerCase()})`);
-      formData.append('message', lines);
-      formData.append('from_name', `${source} User`);
-
-      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+      const res = await fetch(FEEDBACK_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          source,
+          sentiment,
+          tag,
+          text: text.trim(),
+          pathname: window.location.pathname,
+        }),
+      });
       const result = await res.json();
 
       if (result.success) {
@@ -236,11 +231,11 @@ export default function FeedbackWidget({ source = 'Madrona App', accessKey = WEB
           width: 44,
           height: 44,
           borderRadius: '50%',
-          border: `0.5px solid ${INK_12}`,
-          background: 'rgba(255,255,255,0.75)',
+          border: '0.5px solid rgba(0,0,0,0.08)',
+          background: 'rgba(28,25,23,0.08)',
           backdropFilter: 'blur(12px)',
           WebkitBackdropFilter: 'blur(12px)',
-          color: INK_35,
+          color: 'rgba(28,25,23,0.4)',
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
@@ -253,14 +248,14 @@ export default function FeedbackWidget({ source = 'Madrona App', accessKey = WEB
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'translateY(-1px)';
           e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06), 0 6px 16px rgba(0,0,0,0.08)';
-          e.currentTarget.style.color = INK_60;
-          e.currentTarget.style.borderColor = INK_35;
+          e.currentTarget.style.color = 'rgba(28,25,23,0.6)';
+          e.currentTarget.style.borderColor = 'rgba(0,0,0,0.15)';
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.transform = 'translateY(0)';
           e.currentTarget.style.boxShadow = '0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06)';
-          e.currentTarget.style.color = INK_35;
-          e.currentTarget.style.borderColor = INK_12;
+          e.currentTarget.style.color = 'rgba(28,25,23,0.4)';
+          e.currentTarget.style.borderColor = 'rgba(0,0,0,0.08)';
         }}
       >
         <BubbleIcon />

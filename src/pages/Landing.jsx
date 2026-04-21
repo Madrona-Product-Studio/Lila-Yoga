@@ -43,7 +43,7 @@ const DECKS = [
   {
     key: 'body',
     route: '/body',
-    name: 'Lila Body',
+    name: 'Body',
     subtitle: 'Intellectual \u00b7 Scientific',
     desc: '47 cards on movement science and the body.',
     Cover: () => <BodyCover />,

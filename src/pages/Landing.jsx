@@ -16,6 +16,7 @@ import { TeachingsCover } from '@pages/Teachings';
 import { MovementsCover } from '@pages/Movements';
 import { CoverScreen as BodyCover } from '@pages/MovementsL2';
 import { L1_MARK_IDS } from '@components/guide/DeckMarks';
+import FeedbackWidget from '@components/FeedbackWidget';
 
 const SANS = FONTS.body;
 const SERIF = FONTS.serif;
@@ -274,6 +275,7 @@ export default function Landing() {
           </div>
         </footer>
       </div>
+      <FeedbackWidget source="Lila Yoga" />
     </>
   );
 }

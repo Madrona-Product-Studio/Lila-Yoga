@@ -1,28 +1,33 @@
 /**
- * movementDeckL2.js — Lila Movements Level 2: How It Works
- * ═════════════════════════════════════════════════════════
+ * movementDeckL2.js — Lila Body
+ * ═════════════════════════════
  *
- * 47 cards across 3 chapters. All data pulled directly from
- * the original movementDeck.js — no edits to card content.
+ * 30 cards across 5 chapters. Streamlined from the original 47-card deck
+ * to focus on the anatomy and movement patterns that matter most.
  *
- * Chapter 1: How Your Body Works (33 cards, 6 groups)
- * Chapter 2: What Modern Life Does To It (10 cards, 5 groups)
- * Chapter 3: How To Think About It (4 cards, 2 groups)
+ * Chapter 1: The Deep Core (5 cards)
+ * Chapter 2: The Pelvis & Hips (5 cards)
+ * Chapter 3: The Spine & Shoulder (6 cards)
+ * Chapter 4: The Lower Body (4 cards)
+ * Chapter 5: How It All Works Together (10 cards)
  */
 
 export const MOVEMENT_DECK_L2 = [
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTER 1: THE DEEP CORE
+// ═══════════════════════════════════════════════════════════════════════════════
 {
-    id: "how-your-body-works",
-    title: "How Your Body Works",
-    subtitle: "Anatomy & Movement Science",
-    desc: "The vocabulary of your body — muscles, joints, and the systems that connect them. Not memorization, but recognition. Learn the pieces so you can feel them move.",
+    id: "deep-core",
+    title: "The Deep Core",
+    subtitle: "The invisible architecture",
+    desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber — diaphragm on top, pelvic floor below, deep muscles wrapping the sides. When it works, your spine is protected before you even think about moving. When it doesn't, everything else compensates.",
     accent: "#2D6B6B",
     groups: [
       {
-        id: "breath-core",
-        label: "Breath & Deep Core",
+        id: "deep-core-cards",
+        label: "The Deep Core",
         subtitle: "The invisible architecture",
-        desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber — diaphragm on top, pelvic floor below, deep muscles wrapping the sides. When it works, your spine is protected before you even think about moving. When it doesn't, everything else compensates.",
+        desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber — diaphragm on top, pelvic floor below, deep muscles wrapping the sides.",
         icon: "◎",
         cards: [
           {
@@ -152,38 +157,26 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-          {
-            id: "rectus-abdominis",
-            term: "Rectus Abdominis",
-            brief: "The paired vertical muscle running down the front of the abdomen — the visible \"six-pack\" and the most superficial of the abdominal muscles.",
-            mnemonic: "RECTUS = straight (Latin) — it runs straight down the front, like a ruler. It's the most visible ab muscle, but not the most important one for stability.",
-            image: "rectus-abdominis.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "The rectus abdominis runs from the pubic crest to the sternum and ribs, divided into segments by tendinous intersections that create the visible \"six-pack\" appearance. Its primary action is spinal flexion (curling the trunk forward) and compression of the abdominal cavity. Despite its cultural status as the symbol of core fitness, the rectus abdominis plays a minor role in spinal stability compared to the deep core canister. It is a global mover, not a local stabilizer. A large, strong rectus combined with a dysfunctional deep core is a common and problematic pattern — appearing fit on the surface while being unstable underneath.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Spinal flexion under load", description: "the rectus's primary function — flexing the spine against resistance", examples: ["Crunch", "Cable crunch"] },
-                  { pattern: "Hip-to-rib approximation", description: "bringing pelvis and ribcage toward each other, loading the rectus from its lower or upper attachment", examples: ["Hanging leg raise", "Boat pose"] },
-                  { pattern: "Anti-extension under long lever", description: "resisting spinal extension with the arms extended away from the body — elite-level loading that requires an already-coordinated deep core", examples: ["Ab wheel rollout", "Dragon flag"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Diastasis recti — a separation of the rectus abdominis along the midline linea alba — can occur from excessive loading, rapid increase in intra-abdominal pressure, or pregnancy. A focus on traditional crunches at the expense of deep core training is a common contributor.",
-              },
-            ],
-          },
         ],
       },
+    ],
+  },
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTER 2: THE PELVIS & HIPS
+// ═══════════════════════════════════════════════════════════════════════════════
+{
+    id: "pelvis-hips",
+    title: "The Pelvis & Hips",
+    subtitle: "Where power lives",
+    desc: "The pelvis is the crossroads — spine above, legs below, core wrapping around it. Every force you generate passes through here. The muscles that control it determine how you walk, how you stand, and whether your back hurts. This is where power originates.",
+    accent: "#8A6B4A",
+    groups: [
       {
-        id: "pelvic-engine",
-        label: "The Pelvic Engine",
-        subtitle: "The keystone of the body",
-        desc: "The pelvis is the crossroads — spine above, legs below, core wrapping around it. Every force you generate passes through here. The muscles that control it determine how you walk, how you stand, and whether your back hurts. This is where power originates.",
+        id: "pelvis-hips-cards",
+        label: "The Pelvis & Hips",
+        subtitle: "Where power lives",
+        desc: "The pelvis is the crossroads — spine above, legs below, core wrapping around it. Every force you generate passes through here.",
         icon: "◇",
         cards: [
           {
@@ -286,37 +279,51 @@ export const MOVEMENT_DECK_L2 = [
             ],
           },
           {
-            id: "adductors",
-            term: "Adductors (Inner Thigh)",
-            brief: "Five muscles of the inner thigh that bring the legs together and play a critical role in pelvic stability during movement.",
-            mnemonic: "ADDuctor = ADD legs together. The inner thighs are the peacemakers — they bring everything back to center. Think of a horse rider squeezing the saddle.",
-            image: "adductors.png",
+            id: "hip-joint",
+            term: "The Hip Joint",
+            brief: "A deep ball-and-socket joint — the most mobile and inherently stable joint in the lower body, capable of movement in all three planes.",
+            mnemonic: "ACET-abulum = little cup (Latin: acetum = vinegar cup). The femoral ball sits in the hip's \"cup.\" The deeper the cup, the more stable the joint. The hip's cup is deep — unlike the shoulder, the hip doesn't rely on muscles alone for stability.",
+            image: "hip-joint.png",
             tabs: [
               {
                 label: "Details",
-                content: "The adductor group — adductor longus, adductor brevis, adductor magnus, gracilis, and pectineus — runs from the pubic bone and ischium to the femur and tibia. Collectively they adduct the hip (draw the thigh toward the midline), but their role is more complex: the adductor magnus also assists in hip extension, making it functionally a posterior chain muscle as well as an inner thigh muscle. The adductors are important for pelvic stability in the frontal plane — they work in balance with the glute med to prevent lateral pelvic shift during gait. They are frequently undertrained in conventional fitness programs.",
+                content: "The hip is a ball-and-socket joint where the femoral head sits within the deep acetabulum, reinforced by a fibrocartilaginous rim called the labrum. The depth of the acetabulum provides inherent bony stability — far greater than the shoulder. The hip is capable of flexion, extension, abduction, adduction, internal rotation, and external rotation, making it the most functionally versatile joint in the lower body. More than 20 muscles act on the hip. Maintaining full hip mobility — particularly in extension and rotation — is one of the most impactful things a person can do for long-term lower body and back health. When hip mobility is lost, the lumbar spine and knee are forced to compensate.",
               },
               {
                 label: "Activates",
                 content: [
-                  { pattern: "Adduction under load", description: "isolated adductor strengthening — squeezing the legs toward midline against resistance", examples: ["Copenhagen plank", "Adductor squeeze with ball", "Cable adduction"] },
-                  { pattern: "Wide-stance loading", description: "compound lower-body movements that open the stance and force the adductors to drive hip extension alongside the glutes", examples: ["Sumo squat", "Sumo deadlift", "Goddess pose"] },
-                  { pattern: "Frontal-plane lunge", description: "lateral movement that loads the adductor of the working leg as it decelerates the body", examples: ["Lateral lunge", "Cossack squat"] },
+                  { pattern: "Controlled Articular Rotations (CARs)", description: "slow, active circles that move the hip through its full rotational range — both an assessment (what range do you own) and a training method (expanding it)", examples: ["Standing hip CARs", "Quadruped hip CARs", "Side-lying hip CARs"] },
+                  { pattern: "Rotation-specific positions", description: "floor-based holds that isolate internal and external rotation of the hip — surfaces the asymmetry between sides and trains the rotational range most people have lost", examples: ["90/90 hip stretch", "Pigeon prep", "Shinbox position"] },
+                  { pattern: "Length-tension work", description: "active lengthening of the muscles that cross the hip — especially the hip flexors — to restore extension range lost to chronic sitting", examples: ["Kneeling hip flexor stretch", "Couch stretch", "Low lunge"] },
+                  { pattern: "Single-leg loading", description: "unilateral movement that forces the hip joint to stabilize and generate force on its own — exposes which side is weak and trains both to the standard of the stronger", examples: ["Single-leg hip hinge", "Single-leg deadlift", "Step-up"] },
                 ],
               },
               {
                 label: "Injury Risk",
-                content: "Adductor (groin) strains are among the most common sports injuries in activities involving rapid direction change — soccer, hockey, basketball. The adductor longus is most frequently torn. The Copenhagen plank is the highest-evidence exercise for adductor injury prevention.",
+                content: "Femoroacetabular impingement (FAI) — where the ball and socket pinch, often in deep hip flexion — is increasingly common in athletes, yoga practitioners, and desk workers with limited hip extension. Hip labrum tears frequently accompany impingement. Both can be prevented with attention to hip mobility and movement quality.",
               },
             ],
           },
         ],
       },
+    ],
+  },
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTER 3: THE SPINE & SHOULDER
+// ═══════════════════════════════════════════════════════════════════════════════
+{
+    id: "spine-shoulder",
+    title: "The Spine & Shoulder",
+    subtitle: "The chain above",
+    desc: "The spine is not a rigid pole — it's a spring-loaded stack of 24 movable vertebrae. The shoulder trades stability for range of motion — more freedom than any other joint, but less structural protection. Understanding both changes how you move through everything.",
+    accent: "#6B8FA8",
+    groups: [
       {
-        id: "spine",
-        label: "The Spine",
-        subtitle: "The central column",
-        desc: "Not a rigid pole — a spring-loaded stack of 24 movable vertebrae, each with its own role. The curves absorb shock. The discs allow motion. The ligaments set limits. Understanding how it's built is the first step to understanding why it breaks down.",
+        id: "spine-shoulder-cards",
+        label: "The Spine & Shoulder",
+        subtitle: "The chain above",
+        desc: "The spine is a spring-loaded stack. The shoulder trades stability for range. Together they form the upper body's architecture.",
         icon: "☰",
         cards: [
           {
@@ -341,31 +348,6 @@ export const MOVEMENT_DECK_L2 = [
               {
                 label: "Injury Risk",
                 content: "Loss of the lumbar lordosis (flat back) increases anterior disc pressure. Exaggeration of lumbar lordosis (excessive arch) increases posterior facet joint compression. Either extreme, when fixed, produces predictable patterns of pain — the curve itself is not the problem, its rigidity is.",
-              },
-            ],
-          },
-          {
-            id: "intervertebral-discs",
-            term: "Intervertebral Discs",
-            brief: "The fibrocartilaginous shock absorbers between each vertebra — the spine's cushioning system and one of its most commonly injured structures.",
-            mnemonic: "Think of the disc as a jelly doughnut: tough outer ring (annulus fibrosus), soft inner core (nucleus pulposus). Repetitive bending under load squeezes the jelly toward the back of the doughnut — where the nerves are.",
-            image: "intervertebral-discs.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "Between each pair of vertebrae sits an intervertebral disc — a structure consisting of a tough outer fibrous ring (annulus fibrosus) and a gel-like inner core (nucleus pulposus). The disc functions as a shock absorber, load distributor, and spacer that allows spinal movement. It receives nutrition through diffusion, not direct blood supply — which is why disc injuries heal slowly. Under compressive load, the nucleus distributes force radially to the annulus. Under repeated flexion (like rounding the back to lift), the nucleus migrates posteriorly toward the thinnest and most vulnerable part of the annulus — where the spinal nerves exit. This is the mechanism of disc herniation. McGill's research shows that the spine tolerates high compressive forces well when neutral, but fails quickly under repeated flexion-compression cycles.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Directional-preference work", description: "repeated movement in the direction that centralizes symptoms — extension for most people with posterior disc involvement, flexion for some. The McKenzie-based approach with the best evidence for disc-related pain", examples: ["Prone press-up", "Standing extension", "Sphinx hold"] },
-                  { pattern: "Coordinated core training", description: "building the coordinated strength the spine uses under load — helps the whole system manage pressure and force more efficiently", examples: ["Dead bug", "McGill's Big Three", "Bird dog"] },
-                  { pattern: "Movement and circulation", description: "low-impact movement that keeps the spine loaded through varied ranges — discs thrive on motion and regular, graduated loading", examples: ["Walking", "Swimming", "Dead hang"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Disc herniation is the protrusion of nucleus material through the annulus — most commonly posterolateral, compressing adjacent nerve roots. The L4-L5 and L5-S1 discs are by far the most commonly herniated, accounting for the majority of cases of sciatica.",
               },
             ],
           },
@@ -420,41 +402,6 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-          {
-            id: "sacrum-si-joint",
-            term: "Sacrum & SI Joint",
-            brief: "The triangular base of the spine — where the spine meets the pelvis, and where force transfers between the upper and lower body.",
-            mnemonic: "SACRUM = Latin for \"sacred bone\" — ancient cultures knew it was the structural center of the body. The SI joint is the hinge where the spine and pelvis meet. Jam that hinge and pain radiates everywhere.",
-            image: "sacrum-si-joint.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "The sacrum is a triangular fusion of five vertebrae at the base of the spine, wedged between the two iliac bones of the pelvis. The sacroiliac (SI) joint is the articulation between the sacrum and the ilium — one of the most force-loaded joints in the body, transferring load from the spine to the legs via the pelvis. Unlike most joints, the SI joint moves very little — only 2-4 degrees of rotation and 1-2mm of translation — but that small movement is essential for efficient gait. SI joint dysfunction (commonly felt as pain in the lower back, buttock, and sometimes into the hip or leg) is often caused by asymmetrical loading through the pelvis — one leg habitually bearing more load, or the pelvis chronically tilted. It is clinically often misdiagnosed as lumbar disc pathology.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Unilateral loading", description: "single-leg work that surfaces left-right differences in hip and pelvic loading — whichever side struggles is where the work is", examples: ["Single-leg deadlift", "Step-up", "Single-leg glute bridge"] },
-                  { pattern: "Glute-driven stability", description: "strengthening the glutes (both maximus and medius) so they — not the SI ligaments — control pelvic position under load", examples: ["Hip thrust", "Clamshell", "Lateral band walk"] },
-                  { pattern: "Pelvic floor coordination", description: "restoring the piston relationship between diaphragm and pelvic floor so pressure distributes evenly across both SI joints rather than overloading one side", examples: ["Diaphragmatic breath", "360° breathing"] },
-                  { pattern: "Gait retraining", description: "walking with conscious attention to heel strike, hip extension, and arm swing — every step either trains or aggravates SI function", examples: ["Mindful walking with hip extension focus"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "SI joint dysfunction affects approximately 15-30% of chronic lower back pain patients (Schwarzer et al., 1995). It is more common in women (due to wider pelvic anatomy and hormonal ligament laxity) and during or after pregnancy.",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "shoulder-upper-body",
-        label: "The Shoulder & Upper Body",
-        subtitle: "Mobility at a cost",
-        desc: "The shoulder trades stability for range of motion — more freedom than any other joint, but less structural protection. That tradeoff makes it powerful and fragile. The muscles that hold it in place are small, precise, and easily overwhelmed by the larger muscles around them.",
-        icon: "◉",
-        cards: [
           {
             id: "shoulder-girdle",
             term: "The Shoulder Girdle",
@@ -530,67 +477,28 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-          {
-            id: "thoracic-outlet",
-            term: "Thoracic Outlet",
-            brief: "The narrow passage between the collarbone, first rib, and neck muscles — where nerves and blood vessels exit the neck and enter the arm, and where compression creates the pain pattern often mistaken for \"just a pinched nerve.\"",
-            mnemonic: "Think of the thoracic outlet as a tunnel. When the tunnel narrows — from tight scalenes, a drooping shoulder, or a forward head — the cables running through it (nerves, arteries, veins) get compressed. The symptoms appear in the hand and arm, but the problem is in the neck and shoulder.",
-            image: "thoracic-outlet.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "The thoracic outlet is the space between the anterior and middle scalene muscles, the first rib, and the clavicle. Through it pass the brachial plexus (the nerve network supplying the entire arm), the subclavian artery, and the subclavian vein. Thoracic outlet syndrome (TOS) occurs when these structures are compressed — producing symptoms ranging from arm tingling and weakness to coldness in the hand. TOS is most commonly caused by poor posture (forward head posture, elevated first rib, drooping shoulders) rather than structural abnormality. Upper Crossed Syndrome is a primary predisposing pattern.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Anterior release", description: "lengthening the tight tissue at the front of the neck and chest that compresses the thoracic outlet from above and in front", examples: ["Scalene stretch", "Pec minor stretch", "Doorway chest stretch"] },
-                  { pattern: "First rib mobilization", description: "specific mobility work for the first rib, which when elevated narrows the space through which nerves and vessels exit the outlet", examples: ["First rib mobilization with towel", "Scalene self-release"] },
-                  { pattern: "Postural retraining", description: "the opposite of the aggravating posture — open the chest, stack the ribs over the pelvis, pull the head back over the shoulders", examples: ["Thoracic extension over foam roller", "Chin tuck", "Wall angel"] },
-                  { pattern: "Posterior activation", description: "strengthening the muscles that hold the new posture in place — without this, release and mobility work won't stick", examples: ["Lower trap activation (prone Y)", "Band pull-apart", "Scapular retraction holds"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "TOS is frequently misdiagnosed as carpal tunnel syndrome or cervical disc disease because the symptoms (hand numbness, arm weakness) appear distant from the actual compression site. The key diagnostic clue: symptoms change with head and shoulder position — ruling in a postural rather than a structural cause.",
-              },
-            ],
-          },
         ],
       },
+    ],
+  },
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTER 4: THE LOWER BODY
+// ═══════════════════════════════════════════════════════════════════════════════
+{
+    id: "lower-body",
+    title: "The Lower Body",
+    subtitle: "Ground contact",
+    desc: "Force enters your body through the ground and travels upward — foot to ankle to knee to hip. Each joint has a job. When one fails to do it, the next one in line absorbs the load. Most lower body injuries are compensation injuries — the joint that hurts is covering for the joint that won't move.",
+    accent: "#7A9E8A",
+    groups: [
       {
-        id: "hip-knee",
-        label: "The Lower Body Joints",
-        subtitle: "Ground up",
-        desc: "Force enters your body through the ground and travels upward — foot to ankle to knee to hip. Each joint has a job. When one fails to do it, the next one in line absorbs the load. Most lower body injuries are compensation injuries — the joint that hurts is covering for the joint that won't move.",
+        id: "lower-body-cards",
+        label: "The Lower Body",
+        subtitle: "Ground contact",
+        desc: "Force enters through the ground and travels up. Each joint has a job. When one fails, the next one absorbs the load.",
         icon: "△",
         cards: [
-          {
-            id: "hip-joint",
-            term: "The Hip Joint",
-            brief: "A deep ball-and-socket joint — the most mobile and inherently stable joint in the lower body, capable of movement in all three planes.",
-            mnemonic: "ACET-abulum = little cup (Latin: acetum = vinegar cup). The femoral ball sits in the hip's \"cup.\" The deeper the cup, the more stable the joint. The hip's cup is deep — unlike the shoulder, the hip doesn't rely on muscles alone for stability.",
-            image: "hip-joint.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "The hip is a ball-and-socket joint where the femoral head sits within the deep acetabulum, reinforced by a fibrocartilaginous rim called the labrum. The depth of the acetabulum provides inherent bony stability — far greater than the shoulder. The hip is capable of flexion, extension, abduction, adduction, internal rotation, and external rotation, making it the most functionally versatile joint in the lower body. More than 20 muscles act on the hip. Maintaining full hip mobility — particularly in extension and rotation — is one of the most impactful things a person can do for long-term lower body and back health. When hip mobility is lost, the lumbar spine and knee are forced to compensate.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Controlled Articular Rotations (CARs)", description: "slow, active circles that move the hip through its full rotational range — both an assessment (what range do you own) and a training method (expanding it)", examples: ["Standing hip CARs", "Quadruped hip CARs", "Side-lying hip CARs"] },
-                  { pattern: "Rotation-specific positions", description: "floor-based holds that isolate internal and external rotation of the hip — surfaces the asymmetry between sides and trains the rotational range most people have lost", examples: ["90/90 hip stretch", "Pigeon prep", "Shinbox position"] },
-                  { pattern: "Length-tension work", description: "active lengthening of the muscles that cross the hip — especially the hip flexors — to restore extension range lost to chronic sitting", examples: ["Kneeling hip flexor stretch", "Couch stretch", "Low lunge"] },
-                  { pattern: "Single-leg loading", description: "unilateral movement that forces the hip joint to stabilize and generate force on its own — exposes which side is weak and trains both to the standard of the stronger", examples: ["Single-leg hip hinge", "Single-leg deadlift", "Step-up"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Femoroacetabular impingement (FAI) — where the ball and socket pinch, often in deep hip flexion — is increasingly common in athletes, yoga practitioners, and desk workers with limited hip extension. Hip labrum tears frequently accompany impingement. Both can be prevented with attention to hip mobility and movement quality.",
-              },
-            ],
-          },
           {
             id: "quadriceps",
             term: "Quadriceps",
@@ -695,11 +603,24 @@ export const MOVEMENT_DECK_L2 = [
           },
         ],
       },
+    ],
+  },
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTER 5: HOW IT ALL WORKS TOGETHER
+// ═══════════════════════════════════════════════════════════════════════════════
+{
+    id: "how-it-works",
+    title: "How It All Works Together",
+    subtitle: "Patterns, not parts",
+    desc: "The body is not a collection of independent muscles — it is a system of linked joints, fascial chains, and movement patterns. These cards give you the vocabulary to understand how the pieces connect, why modern life creates predictable dysfunctions, and where to look when something hurts.",
+    accent: "#A85C4A",
+    groups: [
       {
-        id: "movement-vocab",
-        label: "Movement Vocabulary",
-        subtitle: "The language of motion",
-        desc: "Before you can fix how you move, you need words for what movement is. Flexion, extension, rotation, abduction — these aren't clinical abstractions. They're the alphabet your body uses every time you reach, twist, step, or bend. Learn the vocabulary and the body starts making sense.",
+        id: "how-it-works-cards",
+        label: "How It All Works Together",
+        subtitle: "Patterns, not parts",
+        desc: "The vocabulary to understand how pieces connect, why modern life creates predictable dysfunctions, and where to look when something hurts.",
         icon: "⇄",
         cards: [
           {
@@ -727,54 +648,6 @@ export const MOVEMENT_DECK_L2 = [
             ],
           },
           {
-            id: "adduction-abduction",
-            term: "Adduction & Abduction",
-            brief: "Moving a limb toward the body's midline (adduction) or away from it (abduction) — the side-to-side language of the frontal plane.",
-            mnemonic: "ADDuction = ADD the limb back to your body (toward center). ABduction = ABsent from the body (moving away). Think of opening and closing a door — abduction opens, adduction closes.",
-            image: "adduction-abduction.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "Adduction moves a limb toward the midline — arms lowering to the sides, thighs squeezing together. The primary hip adductors are the inner thigh muscles; shoulder adduction is primarily driven by the lats and pec major. Abduction moves a limb away from the midline — raising the arm to the side, stepping the leg laterally. Hip abduction is driven primarily by the glute med; shoulder abduction by the deltoid and supraspinatus. Both movements occur in the frontal plane. They are the most undertrained movement pattern in conventional fitness — most programs are dominated by sagittal plane (flexion/extension) movements, leaving the frontal plane underloaded and vulnerable.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Adduction", description: "moving a limb toward the body's midline — hip adductors pull the thigh in; pec major and lats pull the arm in", examples: ["Cable fly", "Copenhagen plank", "Inner thigh squeeze"] },
-                  { pattern: "Abduction", description: "moving a limb away from the body's midline — glute med lifts the leg out; deltoids lift the arm out", examples: ["Lateral raise", "Clamshell", "Lateral band walk", "Side-lying leg raise"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Frontal plane weakness — specifically insufficient hip abduction strength — is the primary driver of Trendelenburg gait, IT band syndrome, patellofemoral pain, and hip impingement.",
-              },
-            ],
-          },
-          {
-            id: "internal-external-rotation",
-            term: "Internal & External Rotation",
-            brief: "Turning a limb inward toward the body's midline (internal rotation) or outward away from it (external rotation) — the rotational language of movement.",
-            mnemonic: "Think of a door hinge. The joint is the hinge; the limb is the door. Internal rotation turns the front of the limb toward the body; external rotation turns it away. Most people are stuck in internal rotation from how they live.",
-            image: "rotation.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "Internal rotation turns a limb inward — the front of the thigh rotating toward the midline, or the palm facing the body. External rotation turns outward — the front of the thigh rotating away, or the palm facing forward. The hip and shoulder are the primary rotational joints. Rotation is the most undertrained and most commonly lost movement pattern — particularly hip external rotation, which is restricted in most desk workers and is a primary driver of hip impingement, IT band syndrome, and lumbar pain. Hip external rotation is produced by the deep external rotators (piriformis, obturators, gemelli), the gluteus maximus, and the posterior gluteus medius.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Hip rotation", description: "turning the thigh inward (IR) or outward (ER) at the hip joint — the most commonly lost rotational range in the body, especially external rotation", examples: ["90/90 stretch", "Pigeon pose", "Clamshell (ER)", "Hip IR stretch"] },
-                  { pattern: "Shoulder rotation", description: "turning the upper arm inward or outward at the shoulder — the rotator cuff's primary job, usually trained as external rotation because internal is already overactive", examples: ["Cable external rotation", "Side-lying external rotation"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Limited hip external rotation forces the femur into internal rotation during walking, squatting, and running — driving the knee inward (valgus) and stressing the medial knee and lower back. At the shoulder, poor rotator cuff control during internal rotation is a primary driver of impingement and labral tears.",
-              },
-            ],
-          },
-          {
             id: "planes-of-motion",
             term: "Planes of Motion",
             brief: "Three imaginary planes that describe the direction of every movement — sagittal (forward/back), frontal (side/side), and transverse (rotational).",
@@ -797,30 +670,6 @@ export const MOVEMENT_DECK_L2 = [
               {
                 label: "Injury Risk",
                 content: "Training only in the sagittal plane leaves the body unprepared for frontal and transverse loading — a primary reason people injure themselves during seemingly simple rotational or lateral movements. This is particularly common in weekend warriors who do sagittal-plane gym work all week and then play sport on weekends.",
-              },
-            ],
-          },
-          {
-            id: "eccentric-concentric",
-            term: "Eccentric vs. Concentric Contraction",
-            brief: "The difference between a muscle shortening under load (concentric) and lengthening under load (eccentric) — the eccentric phase is where most injuries occur and most strength gains are made.",
-            mnemonic: "CONcentric = CONtracting and shortening (the curl up). ECcentric = ECiting the lengthened position (the curl down, under control). The eccentric is the harder, more important phase — and the one most people skip.",
-            image: "eccentric-concentric.png",
-            tabs: [
-              {
-                label: "Details",
-                content: "Concentric contraction occurs when a muscle generates force while shortening — the bicep during the lifting phase of a curl. Eccentric contraction occurs when a muscle generates force while lengthening — the bicep during the lowering phase of a curl, or the quadriceps during a step-down. Eccentric loading is the primary mechanism of both muscle damage (which drives hypertrophy and strengthening) and injury (when the load exceeds the tissue's capacity). Research consistently shows that eccentric exercise produces greater strength gains, greater tendon stiffness improvements, and better injury prevention outcomes than concentric-only training. The Nordic hamstring curl, which emphasizes eccentric hamstring loading, reduces hamstring strain incidence by approximately 51% in athletes.",
-              },
-              {
-                label: "Activates",
-                content: [
-                  { pattern: "Eccentric emphasis", description: "slowing down the lengthening phase of a movement — useful for tendon health (Achilles, patellar), for deliberate time-under-tension, and for specific rehab protocols. The strength and size differences vs. standard tempo are modest in the research", examples: ["Nordic curl", "Spanish squat", "Step-down (slow)", "Eccentric heel drop"] },
-                  { pattern: "Universal application", description: "the eccentric phase is already present in every strength exercise — the training change is slowing it down on purpose rather than moving it differently", examples: ["Slow-lowering squat", "Slow-lowering push-up", "Slow-lowering row"] },
-                ],
-              },
-              {
-                label: "Injury Risk",
-                content: "Most acute muscle injuries (hamstring tears, calf strains, quadriceps tears) occur during the eccentric phase — when the muscle is actively lengthening under sudden load. Neglecting eccentric training leaves muscles unprepared for the high forces of sprinting, jumping, and rapid deceleration.",
               },
             ],
           },
@@ -899,50 +748,6 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-        ],
-      },
-    ],
-  },
-{
-    id: "what-modern-life-does",
-    title: "What Modern Life Does To It",
-    subtitle: "Posture, painpoints, and pressures of today.",
-    desc: "The patterns that emerge when bodies designed for movement spend their days in chairs. Not blame — understanding. See the pattern, and you can change it.",
-    accent: "#A85C4A",
-    groups: [
-      {
-        id: "pelvic-tilt",
-        label: "The Pelvic Tilt Problem",
-        subtitle: "Where posture begins and breaks down",
-        desc: "Your pelvis is a bowl that can tip forward or backward — and whichever way it tips, your spine follows. Sitting all day locks it in one position. The muscles that should hold it steady forget how. What shows up as back pain, tight hips, or a gut that won't flatten is often this one thing: a pelvis that has lost the ability to choose.",
-        icon: "↗",
-        cards: [
-          {
-            id: "pelvis-spine-connection",
-            term: "The Pelvis-Spine Connection",
-            brief: "The position of the pelvis directly determines the shape of the lumbar spine — they are not independent structures but two parts of the same system.",
-            mnemonic: "The pelvis and lumbar spine are like two gears in a clock. Turn one and the other turns with it — automatically and immediately. You cannot change your lumbar position without changing your pelvic position.",
-            image: "pelvis-spine-connection.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "The lumbar spine sits directly on top of the sacrum, which is the posterior anchor of the pelvis. Their relationship is immediate and reciprocal: anterior pelvic tilt (the front of the pelvis dropping forward) increases lumbar lordosis. Posterior pelvic tilt (the front rising, the back dropping) reduces or reverses the lumbar curve. This is why the simple act of tucking the pelvis (posterior tilt) in cat-cow instantly changes the shape of the lower back — and why someone's pelvic position while sitting is inseparable from their lumbar pain pattern. Research from PMC's spine sagittal balance literature confirms that cervical lordosis, thoracic kyphosis, lumbar lordosis, and pelvic anatomy must all maintain a harmonious relationship for minimum energy expenditure and spinal health.",
-              },
-              {
-                label: "Why It Matters",
-                content: "When the pelvis is chronically tilted forward (anterior tilt), the posterior lumbar disc and facet joints are chronically compressed. When chronically tilted backward (posterior tilt), the anterior disc is chronically loaded. Neither is inherently pathological — the problem arises when a fixed position removes adaptability and loads the same structures repeatedly without variation.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Cat-cow (conscious exploration of the full range)",
-                  "pelvic tilts supine",
-                  "standing pelvic awareness exercises",
-                  "posterior pelvic tilt exercises for back pain",
-                ],
-              },
-            ],
-          },
           {
             id: "lower-crossed-syndrome",
             term: "Lower Crossed Syndrome",
@@ -969,15 +774,6 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-        ],
-      },
-      {
-        id: "screens-upper-body",
-        label: "What Screens Do to Your Upper Body",
-        subtitle: "The posture of modern life",
-        desc: "Hours of looking down at a phone or forward at a screen create a predictable pattern: the chest tightens, the upper back rounds, the head drifts forward, and the shoulders creep toward the ears. It's not damage — it's adaptation. Your body shaped itself around the position you gave it most.",
-        icon: "✕",
-        cards: [
           {
             id: "upper-crossed-syndrome",
             term: "Upper Crossed Syndrome",
@@ -1006,157 +802,6 @@ export const MOVEMENT_DECK_L2 = [
             ],
           },
           {
-            id: "compensation-pattern",
-            term: "The Compensation Pattern",
-            brief: "When one part of the kinetic chain fails, an adjacent joint takes over its role — doing a job it was not designed for, eventually breaking down itself.",
-            mnemonic: "When the weakest link in a chain breaks, the load doesn't disappear — it transfers to the next link. The body does the same thing. The site of pain is often not the site of the problem.",
-            image: "compensation-pattern.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "Compensation patterns are the body's adaptive response to movement dysfunction. When a joint or muscle fails to perform its designed role, the kinetic chain reorganizes to maintain function — but at the cost of loading adjacent structures inappropriately. Classic examples: limited ankle dorsiflexion → excessive knee valgus during squatting; glute max weakness → lumbar hyperextension during hip extension; upper trap dominance → shoulder impingement during overhead movement. In each case, the site of eventual pain is not where the dysfunction originated. This is why treating only the symptomatic site — without identifying and addressing the root cause — typically leads to temporary relief followed by recurrence. The most important clinical skill in movement assessment is tracing the chain from symptom back to source.",
-              },
-              {
-                label: "Why It Matters",
-                content: "Compensation patterns, if allowed to persist, eventually load passive structures (ligaments, joint capsules, discs) beyond their design tolerances. Unlike muscles, these structures have limited healing capacity — making early identification and correction of compensation patterns essential for long-term joint health.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Movement screening to identify compensation (overhead squat, single-leg squat, hip extension pattern)",
-                  "addressing root cause before treating symptoms",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "fascial-body",
-        label: "The Fascial Body",
-        subtitle: "The web beneath the muscles",
-        desc: "Under your skin, wrapping every muscle and organ, is a continuous sheet of connective tissue called fascia. It doesn't show up on most anatomy charts, but it transmits force across your entire body. When one part gets stiff or stuck, the tension travels — which is why stretching a tight hamstring sometimes does nothing, but releasing the fascia in your foot fixes it.",
-        icon: "∥",
-        cards: [
-          {
-            id: "superficial-back-line",
-            term: "The Superficial Back Line",
-            brief: "A continuous myofascial line running from the sole of the foot to the top of the skull — the body's longest and most clinically significant fascial chain.",
-            mnemonic: "Think of the Superficial Back Line as a single long guitar string running up the back of your body. Tighten one end (the plantar fascia) and the whole string vibrates — including the far end (the suboccipital muscles at the base of your skull).",
-            image: "superficial-back-line.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "Mapped by Thomas Myers in Anatomy Trains (4th ed., Elsevier, 2020) and supported by dissection research (Wilke et al., 2016), the Superficial Back Line (SBL) runs: plantar fascia → Achilles tendon → gastrocnemius/soleus → hamstrings → sacrotuberous ligament → thoracolumbar fascia → erector spinae → nuchal ligament → scalp fascia. This is not a metaphor — each transition point has been verified anatomically as a continuous fascial connection. The practical implication is profound: \"hamstring tightness\" is often a manifestation of tension anywhere along this line — tight calves, a stiff thoracolumbar fascia, or even a restricted suboccipital region. Treatment that addresses only the hamstrings while ignoring the rest of the line will provide only temporary relief.",
-              },
-              {
-                label: "Why It Matters",
-                content: "Plantar fasciitis — inflammation at the very base of the SBL — is often accompanied by calf tightness, hamstring restriction, and lower back pain. These are not separate problems — they are one problem expressed at multiple locations along the same line.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Forward fold with progression from ankle to neck",
-                  "full-body foam rolling along the posterior chain",
-                  "yoga sequences emphasizing the posterior body",
-                ],
-              },
-            ],
-          },
-          {
-            id: "why-stretching-doesnt-work",
-            term: "Why Stretching Doesn't Always Work",
-            brief: "Stretching a single muscle provides only temporary relief when the restriction is part of a continuous fascial chain — you have to address the whole line.",
-            mnemonic: "Imagine a sweater that's been snagged. Pulling on the snagged area makes it worse. You have to find where it caught and release it there — not just at the point of tightness.",
-            image: "why-stretching-doesnt-work.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "When the body experiences tension in a myofascial line, it distributes that tension across the entire chain. Stretching an isolated muscle (like the hamstring) temporarily increases its length locally, but if the restriction originates elsewhere in the chain (calves, thoracolumbar fascia), the tension returns quickly as the chain re-establishes its global tension. This is why many people stretch their hamstrings for years with minimal lasting change. Effective treatment addresses the full line — mobilizing the plantar fascia, releasing the calves, working the thoracolumbar region, and then reassessing hamstring length. This principle applies to all myofascial lines, not just the SBL.",
-              },
-              {
-                label: "Why It Matters",
-                content: "Aggressive, repeated isolated stretching of a symptomatic site can actually increase irritation. If a muscle is \"tight\" because it's bearing load from a restricted chain, repeatedly stretching it while the chain remains restricted creates persistent microtrauma at the symptomatic site.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Sequential chain mobilization: plantar fascia rolling → calf stretching → hamstring lengthening → lumbar mobility → neck mobility",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "core-stability",
-        label: "Core Stability vs. Strength",
-        subtitle: "They are not the same thing",
-        desc: "A strong core can do a hundred crunches. A stable core can protect your spine before you even know you need it. Most core training builds the wrong one. Stability is about timing and coordination — the deep muscles firing milliseconds before you move. Strength without stability is a sports car with no steering.",
-        icon: "▣",
-        cards: [
-          {
-            id: "stability-vs-strength",
-            term: "Stability vs. Strength",
-            brief: "Core strength measures how much force the trunk muscles can produce. Core stability measures how well they coordinate to protect the spine — and it's stability, not strength, that prevents injury.",
-            mnemonic: "A skyscraper doesn't stand because its steel is the strongest available — it stands because the forces within it are coordinated and distributed efficiently. A strong core without stability is a skyscraper with misaligned beams.",
-            image: "stability-vs-strength.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "Core strength refers to the maximal force production capacity of the trunk muscles — how much a person can curl, flex, and resist. Core stability refers to the ability of the deep stabilization system (TVA, multifidus, diaphragm, pelvic floor) to co-activate with precise timing and appropriate magnitude to maintain spinal stiffness under varying loads. Stuart McGill's research established that most spinal injuries are not caused by muscle weakness but by poor motor control — the wrong muscles activating at the wrong time, or the right muscles failing to activate at all. A person with a strong rectus abdominis but poor deep core coordination is at greater injury risk than someone with modest strength and excellent coordination. This explains why conventional \"core work\" (crunches, sit-ups) fails to prevent back pain — it trains the wrong qualities.",
-              },
-              {
-                label: "Why It Matters",
-                content: "Spinal loading studies (McGill, University of Waterloo) show that sit-ups and crunches impose compressive loads on the lumbar spine exceeding safe tolerances for people with disc pathology. The repeated flexion under load — exactly the movement pattern associated with disc herniation — makes these exercises contraindicated for individuals with back pain or disc dysfunction.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "McGill's Big Three (bird dog, curl-up, side plank) — designed to build endurance in stabilizers without spinal flexion",
-                  "Dead bug",
-                  "Pallof press",
-                  "plank variations",
-                ],
-              },
-            ],
-          },
-          {
-            id: "anticipatory-core-activation",
-            term: "Anticipatory Core Activation",
-            brief: "A healthy deep core fires before the limbs move — a pre-emptive stability response that is disrupted by pain, injury, and inactivity.",
-            mnemonic: "A healthy core is like a seatbelt that tightens before a crash — not after. Pain, injury, and sedentary habits turn it into a seatbelt that only responds after impact.",
-            image: "anticipatory-core-activation.png",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "Research by Paul Hodges and Carolyn Richardson (1996, 1998) used electromyography to demonstrate that in healthy individuals, the transverse abdominis activates 30–110 milliseconds before any limb movement — whether lifting an arm, stepping, or throwing. This feedforward activation is automatic and unconscious: the brain anticipates the destabilizing effect of limb movement and pre-stiffens the spine before the movement occurs. In individuals with chronic low back pain, this timing is consistently delayed or absent — the core responds to movement rather than anticipating it. Importantly, this timing impairment persists even after pain resolves, which is why back pain tends to recur without specific rehabilitation. Retraining anticipatory activation — not just strengthening the muscles — is the clinical target.",
-              },
-              {
-                label: "Why It Matters",
-                content: "The absence of anticipatory core activation means that each movement begins with an unprotected spine. For low-load activities this is manageable; under high loads or unexpected perturbations (tripping, catching a falling object), the unprotected spine is vulnerable to acute injury.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Dead bug (emphasizing TVA pre-activation before limb movement)",
-                  "bird dog",
-                  "diaphragmatic breathing to restore coordination",
-                  "slow deliberate loaded movements with attention to bracing",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "kinetic-chain",
-        label: "The Kinetic Chain & Injury",
-        subtitle: "The site of pain is rarely the source",
-        desc: "Your body is a chain of linked joints. When one link can't do its job, the next link picks up the slack — until it breaks. The knee that hurts isn't weak. The hip above it is stiff. The shoulder that aches isn't damaged. The thoracic spine behind it stopped rotating. Fix the source, not the symptom.",
-        icon: "⟶",
-        cards: [
-          {
             id: "the-kinetic-chain",
             term: "The Kinetic Chain",
             image: "kinetic-chain.png",
@@ -1180,50 +825,6 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-          {
-            id: "proximal-distal-force",
-            term: "Proximal-to-Distal Force Transfer",
-            image: "proximal-to-distal.png",
-            brief: "Power and stability generated at the center of the body (pelvis, core) are transmitted outward to the extremities — the source of most athletic power and most athletic injury.",
-            mnemonic: "A bullwhip generates force at the handle (proximal) and delivers it at the tip (distal). A weak handle creates a limp whip. A strong, stable core creates powerful extremities — and a weak core forces the extremities to generate their own stability.",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "Proximal-to-distal sequencing describes the biomechanical principle that efficient movement begins with stabilization and force generation at the proximal segments (core, hip, shoulder girdle) before the force is transferred to the distal segments (forearm, hand, foot). This principle applies to throwing, kicking, punching, and all explosive sports movements. PMC research confirms that \"the contribution of more body segments in the total force output leads to higher potential velocity at the distal part.\" When the proximal segments (core and hip) are insufficient, the distal segments (elbow, knee, ankle) are forced to compensate — generating forces they cannot safely sustain, leading to overuse injury.",
-              },
-              {
-                label: "Why It Matters",
-                content: "\"Tennis elbow\" in recreational players is often a wrist and forearm problem driven by insufficient core and shoulder rotation. Pitcher's elbow is driven by inadequate hip rotation and core stability forcing the elbow to compensate. In both cases, treating only the elbow while ignoring the chain is why these injuries recur.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Rotational medicine ball throws",
-                  "cable chops",
-                  "hip-to-shoulder integrated movements",
-                  "any exercise that loads the core before the extremities",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-{
-    id: "what-your-body-needs",
-    title: "How It All Connects",
-    subtitle: "How the pieces work together",
-    desc: "Mental models that make everything else click. These aren't exercises — they're lenses. Once you see through them, you can't unsee.",
-    accent: "#4A7A8A",
-    groups: [
-      {
-        id: "mobility-stability",
-        label: "Mobility vs. Stability",
-        subtitle: "Two different jobs, often confused",
-        desc: "Your body alternates between joints that need to move and joints that need to hold. Ankle: mobile. Knee: stable. Hip: mobile. Lumbar spine: stable. When a mobile joint stiffens up, the stable joint next to it is forced to move instead — doing a job it was never built for. That compensation is where most chronic pain begins.",
-        icon: "⇌",
-        cards: [
           {
             id: "joint-by-joint",
             term: "The Joint-by-Joint Approach",
@@ -1250,42 +851,6 @@ export const MOVEMENT_DECK_L2 = [
             ],
           },
           {
-            id: "thoracic-mobility",
-            term: "Thoracic Mobility",
-            brief: "The mid-back should be the body's primary rotational region — but it is chronically stiff in most people, forcing the lumbar spine and neck to compensate for every twist and reach.",
-            mnemonic: "The thoracic spine is the trunk of the body's rotational tree. When the trunk is stiff, the branches (neck, lower back) bend more than they should — and eventually break.",
-            tabs: [
-              {
-                label: "The Concept",
-                content: "The thoracic spine consists of 12 vertebrae and is the primary region for spinal rotation — each level contributes a few degrees of rotation, totaling approximately 35-50 degrees of rotation for the full thoracic spine. Its facet joints are oriented to permit rotation (unlike lumbar facets, which are vertically oriented and restrict it). Chronic thoracic kyphosis — accelerated by sitting, screens, and stress — removes the thoracic spine's rotational capacity. Research confirms that thoracic kyphosis increases at approximately 2.28 degrees per decade of life and is strongly associated with decreased muscle mass (UK Biobank, 2024). When thoracic rotation is lost, the lumbar spine (which should be stable) is forced to rotate compensatorily — compressing lumbar discs asymmetrically. Simultaneously, the shoulder complex loses its base of support, increasing impingement risk. Physical therapist research confirms that thoracic mobilization — adding rotation and extension work to a stiff thoracic spine — produces measurable improvements in lumbar pain, cervical pain, and shoulder function.",
-              },
-              {
-                label: "Why It Matters",
-                content: "Thoracic stiffness is one of the most undertreated contributors to both lower back pain and shoulder impingement. When the thoracic spine does not rotate adequately for overhead movements, the shoulder compensates with excessive glenohumeral movement — compressing the rotator cuff against the acromion. This is also why spinal twists are among the most important practices in this curriculum.",
-              },
-              {
-                label: "What To Do",
-                content: [
-                  "Thoracic rotation stretch",
-                  "thoracic extension over foam roller",
-                  "cat-cow with focus on thoracic segments",
-                  "thread-the-needle stretch",
-                  "spinal twists",
-                  "yoga poses that demand thoracic rotation (revolved triangle, half lord of the fishes)",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "reading-the-chain",
-        label: "How to Read Your Body",
-        subtitle: "Symptoms lie. Systems don't.",
-        desc: "The place that hurts is almost never the place that's broken. Your body is a network — tension in one area creates compensation somewhere else, and pain at the end of the chain. Learning to read your body means learning to look upstream, not at the symptom.",
-        icon: "⇌",
-        cards: [
-          {
             id: "pain-not-source",
             term: "The Site of Pain Is Not the Source",
             brief: "The body compensates silently. By the time something hurts, the problem has usually been somewhere else for months.",
@@ -1309,30 +874,10 @@ export const MOVEMENT_DECK_L2 = [
               },
             ],
           },
-          {
-            id: "body-as-system",
-            term: "The Body Is a System, Not a Collection of Parts",
-            brief: "Every isolated fix that fails is evidence of a system that wasn't addressed.",
-            mnemonic: "You don't fix a traffic jam by widening one intersection. You model the whole network. The body is the same — one restriction changes flow everywhere downstream.",
-            tabs: [
-              {
-                label: "The Idea",
-                content: "The body is not a machine made of independent components. It is a continuous, interconnected system — muscles linked by fascia, joints linked by kinetic chains, movement patterns linked by the nervous system. When you treat one part in isolation — stretching only the tight muscle, strengthening only the weak one, releasing only the painful spot — you are intervening in a network without considering the network. This is why so many common approaches fail: the hamstring that keeps getting tight despite years of stretching (because the restriction is in the calf or thoracolumbar fascia), the shoulder that keeps getting impinged despite rotator cuff exercises (because the thoracic spine won't rotate), the knee that keeps hurting despite quad strengthening (because the hip can't stabilize in the frontal plane). Each of these is a systems problem treated as a parts problem.",
-              },
-              {
-                label: "Why It Changes Everything",
-                content: "Once you see the body as a system, you stop chasing symptoms. You start asking what pattern produced this symptom. You stop treating muscles and start treating movement. You stop isolating and start integrating. This is the shift from reactive treatment to proactive understanding — and it's what separates the person who keeps getting injured from the person who finally stops.",
-              },
-              {
-                label: "An Example",
-                content: "A person has chronic lower back pain. The isolated approach: stretch the lower back, strengthen the core, take anti-inflammatories. The systems approach: check ankle dorsiflexion (restricted — heels rise in a squat), check hip mobility (limited external rotation — femur internally rotates during movement), observe the knee (collapses inward under load — valgus), observe the hip (drops on one side — Trendelenburg sign), observe the lumbar spine (compensating with rotation and extension it wasn't designed for). One restriction at the ankle created a chain of compensations through the knee, hip, and into the lower back. Five symptoms. One source. The fix isn't a back exercise — it's restoring ankle mobility and hip control. The back pain resolves because the system no longer needs the back to compensate.",
-              },
-            ],
-          },
         ],
       },
     ],
-  }
+  },
 ];
 
 // ─── Derived data ────────────────────────────────────────────────────────────
@@ -1356,14 +901,16 @@ export function buildScreensL2() {
   ];
 
   MOVEMENT_DECK_L2.forEach((chapter, ci) => {
-    const totalChapterCards = chapter.groups.reduce((s, g) => s + g.cards.length, 0);
-    const isSmallChapter = totalChapterCards <= 4;
+    const singleGroup = chapter.groups.length === 1;
 
     screens.push({ type: 'chapter-title', chapter, chapterIndex: ci });
-    screens.push({ type: 'chapter-toc', chapter, chapterIndex: ci });
+
+    if (!singleGroup) {
+      screens.push({ type: 'chapter-toc', chapter, chapterIndex: ci });
+    }
 
     chapter.groups.forEach((group, gi) => {
-      if (!isSmallChapter) {
+      if (!singleGroup) {
         screens.push({ type: 'group-title', group, chapter, chapterIndex: ci, groupIndex: gi });
       }
 

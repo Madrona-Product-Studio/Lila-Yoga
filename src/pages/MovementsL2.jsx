@@ -117,9 +117,11 @@ const config = {
   chapters: MOVEMENT_DECK_L2,
   coverOverride: CoverScreen,
   chapterMarkMap: {
-    'how-your-body-works': 'body',
-    'what-modern-life-does': 'force',
-    'what-your-body-needs': 'understanding',
+    'deep-core': 'body',
+    'pelvis-hips': 'body',
+    'spine-shoulder': 'body',
+    'lower-body': 'body',
+    'how-it-works': 'understanding',
   },
   welcome: {
     title: 'Begin',

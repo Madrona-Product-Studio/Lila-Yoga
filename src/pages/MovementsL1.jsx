@@ -3,15 +3,24 @@
  * Route: /movements
  */
 
-import { buildScreensL1, getTotalCardsL1 } from '@data/movementDeckL1';
+import { buildScreensL1, getTotalCardsL1, MOVEMENT_DECK_L1 } from '@data/movementDeckL1';
 import { L1_MARK_IDS } from '@components/guide/DeckMarks';
 import Movements from './Movements';
 
 const SCREENS = buildScreensL1();
 
+const SECTION_ACCENT = '#4A7A5A';
+const sectionChapters = MOVEMENT_DECK_L1[0].groups.map(g => ({
+  id: g.id,
+  title: g.label,
+  subtitle: g.subtitle,
+  accent: SECTION_ACCENT,
+}));
+
 const config = {
   subtitle: '30 poses for a complete practice',
   countLabel: `6 sections · ${getTotalCardsL1()} cards`,
+  chapters: sectionChapters,
   title: 'Lila Movements — The Practice',
   description: '30 yoga poses organized into a single flowing sequence: arrive, awaken, open, balance, ground, rest.',
   markIds: L1_MARK_IDS,

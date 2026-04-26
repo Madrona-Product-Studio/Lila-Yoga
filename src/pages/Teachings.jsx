@@ -2,9 +2,9 @@
  * TeachingsDeck.jsx — Lila Teachings Level 2
  * ═══════════════════════════════════════════
  *
- * 30 concept cards across 6 wisdom traditions.
+ * 30 concept cards across 5 principles (presence, oneness, flow, compassion, reverence).
  * Matches Meditations deck style: warm background, two-faced flip cards,
- * tradition colors as front face backgrounds, cream back face.
+ * principle colors as front face backgrounds, cream back face.
  *
  * Route: /teachings
  */
@@ -13,7 +13,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate as useRouterNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { C, FONTS } from '@data/brand';
-import { TRADITIONS, CARDS, buildScreens, getCardsByTradition } from '@data/teachingsDeck';
+import { PRINCIPLES, TRADITIONS, CARDS, buildScreens, getCardsByPrinciple, getTradition } from '@data/teachingsDeck';
 import PrincipleMark from '@components/guide/PrincipleMarks';
 import DeckMark from '@components/guide/DeckMarks';
 import FeedbackWidget from '@components/FeedbackWidget';
@@ -148,11 +148,11 @@ export function CoverScreen() {
         alignItems: 'center', justifyContent: 'center',
         padding: '0 28px 15%', gap: 16, zIndex: 2,
       }}>
-        {/* Tradition symbols row */}
+        {/* Principle symbols row */}
         <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
-          {TRADITIONS.map(t => (
-            <span key={t.id} style={{ fontSize: 18, color: 'white', opacity: 0.85, lineHeight: 1 }}>
-              {t.symbol}
+          {PRINCIPLES.map(p => (
+            <span key={p.id} style={{ fontSize: 18, color: 'white', opacity: 0.85, lineHeight: 1 }}>
+              {p.symbol}
             </span>
           ))}
         </div>
@@ -184,14 +184,14 @@ export function CoverScreen() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// TRADITION SCREEN (intro card — symbol, name, origin, description, wild, practice)
+// CHAPTER SCREEN (intro card — symbol, name, arc, description, wild, practice)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function TraditionScreen({ tradition }) {
+function ChapterScreen({ principle }) {
   return (
     <div style={{
       width: '100%', height: '100%',
-      background: tradition.color,
+      background: principle.color,
       border: '1px solid rgba(255,255,255,0.1)',
       display: 'flex', flexDirection: 'column',
       justifyContent: 'center',
@@ -208,7 +208,7 @@ function TraditionScreen({ tradition }) {
       <div style={{ width: '100%', position: 'relative' }}>
         {/* Symbol */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
-          <span style={{ fontSize: 48, color: 'white', lineHeight: 1 }}>{tradition.symbol}</span>
+          <span style={{ fontSize: 48, color: 'white', lineHeight: 1 }}>{principle.symbol}</span>
         </div>
 
         {/* Name */}
@@ -218,10 +218,10 @@ function TraditionScreen({ tradition }) {
           lineHeight: 1.0, marginBottom: 8,
           textAlign: 'center',
         }}>
-          {tradition.name}
+          {principle.name}
         </div>
 
-        {/* Origin */}
+        {/* Arc */}
         <div style={{
           fontSize: 14, fontFamily: SANS,
           color: 'white', opacity: 0.6,
@@ -229,7 +229,7 @@ function TraditionScreen({ tradition }) {
           letterSpacing: '0.02em',
           textAlign: 'center',
         }}>
-          {tradition.origin}
+          {principle.arc}
         </div>
 
         <div style={{ width: 28, height: '0.5px', background: 'rgba(255,255,255,0.25)', margin: '0 auto 20px' }} />
@@ -241,7 +241,7 @@ function TraditionScreen({ tradition }) {
           lineHeight: 1.8, fontWeight: 400,
           marginBottom: 20,
         }}>
-          {tradition.description}
+          {principle.description}
         </div>
 
         {/* Wild — connection to wilderness */}
@@ -252,7 +252,7 @@ function TraditionScreen({ tradition }) {
           fontStyle: 'italic',
           marginBottom: 20,
         }}>
-          {tradition.wild}
+          {principle.wild}
         </div>
 
         {/* Practice prompt */}
@@ -263,7 +263,7 @@ function TraditionScreen({ tradition }) {
           borderTop: '0.5px solid rgba(255,255,255,0.12)',
           paddingTop: 16,
         }}>
-          {tradition.practice}
+          {principle.practice}
         </div>
       </div>
     </div>
@@ -271,16 +271,16 @@ function TraditionScreen({ tradition }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
-// CONCEPTS SCREEN (TOC card — lists the concepts in this tradition)
+// CONCEPTS SCREEN (TOC card — lists the concepts in this principle)
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function ConceptsScreen({ tradition }) {
-  const cards = getCardsByTradition(tradition.id);
+function ConceptsScreen({ principle }) {
+  const cards = getCardsByPrinciple(principle.id);
 
   return (
     <div style={{
       width: '100%', height: '100%',
-      background: tradition.color,
+      background: principle.color,
       border: '1px solid rgba(255,255,255,0.1)',
       display: 'flex', flexDirection: 'column',
       justifyContent: 'center',
@@ -296,14 +296,14 @@ function ConceptsScreen({ tradition }) {
 
       {/* Header */}
       <div style={{ position: 'relative', marginBottom: 24 }}>
-        {/* Tradition label */}
+        {/* Principle label */}
         <div style={{
           fontSize: 11, fontFamily: SANS,
           fontWeight: 600, color: 'rgba(255,255,255,0.4)',
           letterSpacing: '0.14em', textTransform: 'uppercase',
           marginBottom: 8,
         }}>
-          {tradition.name}
+          {principle.name}
         </div>
 
         {/* Title */}
@@ -312,34 +312,37 @@ function ConceptsScreen({ tradition }) {
           color: 'white', fontWeight: 700, lineHeight: 1.1,
           letterSpacing: '-0.01em',
         }}>
-          Concepts
+          Teachings
         </div>
       </div>
 
       {/* Concept list */}
       <div style={{ position: 'relative' }}>
-        {cards.map((card, i) => (
-          <div key={card.id} style={{
-            display: 'flex', alignItems: 'center', gap: 14,
-            padding: '10px 0',
-            borderBottom: i < cards.length - 1 ? '0.5px solid rgba(255,255,255,0.08)' : 'none',
-          }}>
-            <div style={{ fontSize: 11, color: 'white', opacity: 0.4, fontFamily: SANS, minWidth: 20 }}>
-              {i + 1}.
-            </div>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 16, fontFamily: SANS, color: 'white', opacity: 0.85, fontWeight: 500 }}>
-                {card.name}
+        {cards.map((card, i) => {
+          const trad = TRADITIONS[card.tradition];
+          return (
+            <div key={card.id} style={{
+              display: 'flex', alignItems: 'center', gap: 14,
+              padding: '10px 0',
+              borderBottom: i < cards.length - 1 ? '0.5px solid rgba(255,255,255,0.08)' : 'none',
+            }}>
+              <div style={{ fontSize: 11, color: 'white', opacity: 0.4, fontFamily: SANS, minWidth: 20 }}>
+                {i + 1}.
+              </div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 16, fontFamily: SANS, color: 'white', opacity: 0.85, fontWeight: 500 }}>
+                  {card.name}
+                </div>
+              </div>
+              <div style={{
+                fontSize: 9, fontFamily: SANS, color: 'white', opacity: 0.35,
+                letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0,
+              }}>
+                {trad ? trad.symbol : ''} {card.tag}
               </div>
             </div>
-            <div style={{
-              fontSize: 9, fontFamily: SANS, color: 'white', opacity: 0.35,
-              letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0,
-            }}>
-              {card.tag}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -398,7 +401,7 @@ function DeepDiveSection({ deepDive, color }) {
   );
 }
 
-function CardScreen({ card, tradition }) {
+function CardScreen({ card, principle, tradition }) {
   const [flipped, setFlipped] = useState(false);
   const [flipAnimating, setFlipAnimating] = useState(false);
 
@@ -426,7 +429,7 @@ function CardScreen({ card, tradition }) {
         onClick={handleFlip}
         style={{
           position: 'absolute', inset: 0,
-          background: tradition.color,
+          background: principle.color,
           display: 'flex', flexDirection: 'column',
           cursor: 'pointer',
           overflow: 'hidden',
@@ -558,10 +561,10 @@ function CardScreen({ card, tradition }) {
             gap: 6, flexShrink: 0, cursor: 'pointer',
           }}
         >
-          <DiamondGlyph color={tradition.color} />
+          <DiamondGlyph color={principle.color} />
           <div style={{
             fontSize: 13, fontFamily: SANS, fontWeight: 700,
-            color: tradition.color, letterSpacing: '0.14em', textTransform: 'uppercase',
+            color: principle.color, letterSpacing: '0.14em', textTransform: 'uppercase',
           }}>
             {card.name}
           </div>
@@ -589,18 +592,18 @@ function CardScreen({ card, tradition }) {
             </div>
           </div>
 
-          {/* ◈ DEEP DIVE — tradition-colored, omitted when null */}
-          <DeepDiveSection deepDive={card.deepDive} color={tradition.color} />
+          {/* ◈ DEEP DIVE — principle-colored, omitted when null */}
+          <DeepDiveSection deepDive={card.deepDive} color={principle.color} />
 
-          {/* ◈ OUT IN NATURE — tradition-colored */}
+          {/* ◈ OUT IN NATURE — principle-colored */}
           <div style={{ padding: '18px 22px 0' }}>
             <div style={{
               fontSize: 11, fontFamily: SANS, fontWeight: 700,
-              color: tradition.color, letterSpacing: '0.14em',
+              color: principle.color, letterSpacing: '0.14em',
               textTransform: 'uppercase', marginBottom: 8,
               display: 'flex', alignItems: 'center', gap: 5,
             }}>
-              <DiamondGlyph color={tradition.color} />
+              <DiamondGlyph color={principle.color} />
               Out in Nature
             </div>
             <div style={{
@@ -693,7 +696,7 @@ function TeachingsContinueScreen() {
           color: 'rgba(28,25,23,0.55)', lineHeight: 2.0,
         }}>
           carry the teachings that found you,<br />
-          return to the traditions that held,<br />
+          return to the principles that held,<br />
           let the wisdom meet the walk.
         </div>
       </div>
@@ -771,9 +774,9 @@ function renderScreen(scr) {
   if (!scr) return null;
   if (scr.type === 'cover') return <CoverScreen />;
   if (scr.type === 'welcome') return <WelcomeScreen />;
-  if (scr.type === 'chapter') return <TraditionScreen key={`ch-${scr.traditionIndex}`} tradition={scr.tradition} />;
-  if (scr.type === 'concepts') return <ConceptsScreen key={`toc-${scr.traditionIndex}`} tradition={scr.tradition} />;
-  if (scr.type === 'card') return <CardScreen key={`${scr.traditionIndex}-${scr.cardIndex}`} card={scr.card} tradition={scr.tradition} />;
+  if (scr.type === 'chapter') return <ChapterScreen key={`ch-${scr.principleIndex}`} principle={scr.principle} />;
+  if (scr.type === 'concepts') return <ConceptsScreen key={`toc-${scr.principleIndex}`} principle={scr.principle} />;
+  if (scr.type === 'card') return <CardScreen key={`${scr.principleIndex}-${scr.cardIndex}`} card={scr.card} principle={scr.principle} tradition={scr.tradition} />;
   if (scr.type === 'continue') return <TeachingsContinueScreen />;
   return null;
 }
@@ -868,7 +871,7 @@ export default function TeachingsDeck() {
     <>
       <Helmet>
         <title>Lila Teachings — Ancient Wisdom for Natural Places</title>
-        <meta name="description" content="30 concepts across five wisdom traditions — from ancient India to Stoic Rome." />
+        <meta name="description" content="30 teachings across five principles — presence, oneness, flow, compassion, reverence." />
         <link rel="canonical" href="https://lila.yoga/teachings" />
       </Helmet>
 

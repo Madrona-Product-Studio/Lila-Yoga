@@ -103,6 +103,138 @@ function WelcomeScreen() {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// CONVERGENCE SCREEN — the editorial frame for why principles, not traditions
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function ConvergenceScreen() {
+  return (
+    <div style={{
+      width: '100%', height: '100%',
+      background: '#F7F4EE',
+      display: 'flex', flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '0 36px 48px',
+      position: 'relative', overflow: 'hidden',
+      borderRadius: 14,
+      border: '0.5px solid rgba(0,0,0,0.08)',
+    }}>
+      <div style={{
+        position: 'absolute', bottom: '-5%', left: '50%',
+        transform: 'translateX(-50%)',
+        width: '100%', height: '35%',
+        background: 'radial-gradient(ellipse, rgba(180,100,60,0.05) 0%, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{
+        fontSize: 'clamp(36px, 9vw, 46px)', fontFamily: SANS,
+        color: '#1C1917', fontWeight: 700, lineHeight: 1.05,
+        letterSpacing: '-0.01em', marginBottom: 22,
+        position: 'relative',
+      }}>
+        The same<br />ground
+      </div>
+
+      <div style={{ position: 'relative', marginBottom: 20 }}>
+        <div style={{
+          fontSize: 15, fontFamily: SANS, fontWeight: 400,
+          color: 'rgba(28,25,23,0.62)', lineHeight: 1.85,
+        }}>
+          Hinduism, Buddhism, Taoism, Shinto, Stoicism — traditions separated by oceans and millennia, developed independently, and arrived at strikingly similar recognitions.
+        </div>
+      </div>
+
+      <div style={{ position: 'relative', marginBottom: 20 }}>
+        <div style={{
+          fontSize: 15, fontFamily: SANS, fontWeight: 400,
+          color: 'rgba(28,25,23,0.62)', lineHeight: 1.85,
+        }}>
+          Not because they copied each other. Because they were looking at the same thing.
+        </div>
+      </div>
+
+      <div style={{ width: 28, height: '0.5px', background: 'rgba(28,25,23,0.12)', margin: '0 0 20px', position: 'relative' }} />
+
+      <div style={{
+        fontSize: 14, fontFamily: SANS, fontWeight: 400,
+        color: 'rgba(28,25,23,0.42)', lineHeight: 1.85,
+        position: 'relative',
+      }}>
+        These thirty teachings are organized not by where they came from — but by what they point toward.
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// CHAPTERS SCREEN — five-principle TOC
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function ChaptersScreen() {
+  return (
+    <div style={{
+      width: '100%', height: '100%',
+      background: '#F7F4EE',
+      display: 'flex', flexDirection: 'column',
+      justifyContent: 'center',
+      padding: '0 32px',
+      position: 'relative', overflow: 'hidden',
+      borderRadius: 14,
+      border: '0.5px solid rgba(0,0,0,0.08)',
+    }}>
+      {/* Title */}
+      <div style={{
+        fontSize: 'clamp(32px, 8vw, 42px)', fontFamily: SANS,
+        color: '#1C1917', fontWeight: 700, lineHeight: 1.0,
+        letterSpacing: '-0.01em', marginBottom: 32,
+      }}>
+        Chapters
+      </div>
+
+      {/* Principle list */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        {PRINCIPLES.map((p) => (
+          <div key={p.id}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
+              <div style={{
+                fontSize: 18, color: p.color, lineHeight: 1,
+                width: 20, textAlign: 'center', flexShrink: 0,
+              }}>
+                {p.symbol}
+              </div>
+              <div style={{
+                fontSize: 18, fontFamily: SANS,
+                fontWeight: 600,
+                color: p.color, lineHeight: 1.3,
+              }}>
+                {p.name}
+              </div>
+            </div>
+            <div style={{
+              fontSize: 13, fontFamily: SANS,
+              fontWeight: 400, color: 'rgba(28,25,23,0.45)',
+              paddingLeft: 30, lineHeight: 1.5,
+            }}>
+              {p.arc}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom hint */}
+      <div style={{
+        position: 'absolute', bottom: 32, left: 32,
+        fontSize: 12, fontFamily: SANS,
+        color: 'rgba(28,25,23,0.25)',
+        letterSpacing: '0.04em',
+      }}>
+        Swipe to begin.
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // COVER SCREEN — indigo sky, conifer tree silhouettes
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -774,6 +906,8 @@ function renderScreen(scr) {
   if (!scr) return null;
   if (scr.type === 'cover') return <CoverScreen />;
   if (scr.type === 'welcome') return <WelcomeScreen />;
+  if (scr.type === 'convergence') return <ConvergenceScreen />;
+  if (scr.type === 'chapters') return <ChaptersScreen />;
   if (scr.type === 'chapter') return <ChapterScreen key={`ch-${scr.principleIndex}`} principle={scr.principle} />;
   if (scr.type === 'concepts') return <ConceptsScreen key={`toc-${scr.principleIndex}`} principle={scr.principle} />;
   if (scr.type === 'card') return <CardScreen key={`${scr.principleIndex}-${scr.cardIndex}`} card={scr.card} principle={scr.principle} tradition={scr.tradition} />;

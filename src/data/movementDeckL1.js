@@ -13,19 +13,6 @@ export const MOVEMENT_DECK_L1 = [
     subtitle: '30 poses for a complete practice',
     desc: 'A single flowing sequence: arrive, awaken, open, balance, ground, rest. Each section builds on the last. No prerequisites, no theory. Just the body and the breath.',
     accent: '#4A7A5A',
-    opener: {
-      id: 'aum',
-      term: 'AUM',
-      sanskrit: 'ॐ',
-      image: 'aum.png',
-      brief: 'The sound of the universe breathing. Before movement, before pose, before sequence — this.',
-      mnemonic: 'A (belly) → U (chest) → M (skull) → silence (awareness). The vibration moves through the body and then stills.',
-      tabs: [
-        { label: 'Details', content: 'AUM (or OM) is considered the primordial sound in Hindu and yogic philosophy, the vibration from which all other sound and matter arises. Chanting it at the start of practice is an act of orientation: you are placing yourself within something larger than the session.' },
-        { label: 'Sound', content: 'The three syllables — A, U, M — correspond to waking, dreaming, and deep sleep states. The silence that follows the M is the fourth state: pure awareness. When chanted, the vibration moves from the belly (A) to the chest (U) to the skull (M), then stills.' },
-        { label: 'Tradition', content: 'Found across the Vedas, Upanishads, and Yoga Sūtras. Patañjali names AUM (praṇava) as the symbol of Īśvara — the principle of pure awareness — in Yoga Sūtras I.27. It is not a religious invocation but a tuning of attention.' },
-      ],
-    },
     groups: [
       {
         id: 'arrive',
@@ -33,6 +20,19 @@ export const MOVEMENT_DECK_L1 = [
         subtitle: 'Coming into the body',
         desc: 'Coming into the body. These practices aren\'t warm-ups — they\'re the beginning of listening. Breath, movement, and gravity working together to bring you from wherever you\'ve been into where you are.',
         cards: [
+          {
+            id: 'aum',
+            term: 'AUM',
+            sanskrit: 'ॐ',
+            image: 'aum.png',
+            brief: 'The sound of the universe breathing. Before movement, before pose, before sequence — this.',
+            mnemonic: 'A (belly) → U (chest) → M (skull) → silence (awareness). The vibration moves through the body and then stills.',
+            tabs: [
+              { label: 'Details', content: 'AUM (or OM) is considered the primordial sound in Hindu and yogic philosophy, the vibration from which all other sound and matter arises. Chanting it at the start of practice is an act of orientation: you are placing yourself within something larger than the session.' },
+              { label: 'Sound', content: 'The three syllables — A, U, M — correspond to waking, dreaming, and deep sleep states. The silence that follows the M is the fourth state: pure awareness. When chanted, the vibration moves from the belly (A) to the chest (U) to the skull (M), then stills.' },
+              { label: 'Tradition', content: 'Found across the Vedas, Upanishads, and Yoga Sūtras. Patañjali names AUM (praṇava) as the symbol of Īśvara — the principle of pure awareness — in Yoga Sūtras I.27. It is not a religious invocation but a tuning of attention.' },
+            ],
+          },
           {
             id: 'diaphragmatic-breath',
             term: 'Diaphragmatic Breath',
@@ -1718,7 +1718,7 @@ export const MOVEMENT_DECK_L1 = [
 
 export function getTotalCardsL1() {
   return MOVEMENT_DECK_L1.reduce(
-    (sum, ch) => sum + (ch.opener ? 1 : 0) + ch.groups.reduce((s, g) => s + g.cards.length, 0),
+    (sum, ch) => sum + ch.groups.reduce((s, g) => s + g.cards.length, 0),
     0,
   );
 }
@@ -1730,11 +1730,6 @@ export function buildScreensL1() {
   ];
 
   MOVEMENT_DECK_L1.forEach((chapter, ci) => {
-    // Opener card (AUM)
-    if (chapter.opener) {
-      screens.push({ type: 'card', card: chapter.opener, group: { label: chapter.title }, chapter, chapterIndex: ci, groupIndex: -1, cardIndex: -1 });
-    }
-
     chapter.groups.forEach((group, gi) => {
       screens.push({ type: 'group-title', group, chapter, chapterIndex: ci, groupIndex: gi });
 

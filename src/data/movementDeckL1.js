@@ -11,7 +11,7 @@ export const MOVEMENT_DECK_L1 = [
     id: 'the-practice',
     title: 'The Practice',
     subtitle: '30 poses for a complete practice',
-    desc: 'A single flowing sequence — arrive, awaken, open, balance, ground, rest. Each section builds on the last. No prerequisites, no theory. Just the body and the breath.',
+    desc: 'A single flowing sequence: arrive, awaken, open, balance, ground, rest. Each section builds on the last. No prerequisites, no theory. Just the body and the breath.',
     accent: '#4A7A5A',
     opener: {
       id: 'aum',
@@ -21,7 +21,7 @@ export const MOVEMENT_DECK_L1 = [
       brief: 'The sound of the universe breathing. Before movement, before pose, before sequence — this.',
       mnemonic: 'A (belly) → U (chest) → M (skull) → silence (awareness). The vibration moves through the body and then stills.',
       tabs: [
-        { label: 'Details', content: 'AUM (or OM) is considered the primordial sound in Hindu and yogic philosophy — the vibration from which all other sound and matter arises. Chanting it at the start of practice is an act of orientation: you are placing yourself within something larger than the session.' },
+        { label: 'Details', content: 'AUM (or OM) is considered the primordial sound in Hindu and yogic philosophy, the vibration from which all other sound and matter arises. Chanting it at the start of practice is an act of orientation: you are placing yourself within something larger than the session.' },
         { label: 'Sound', content: 'The three syllables — A, U, M — correspond to waking, dreaming, and deep sleep states. The silence that follows the M is the fourth state: pure awareness. When chanted, the vibration moves from the belly (A) to the chest (U) to the skull (M), then stills.' },
         { label: 'Tradition', content: 'Found across the Vedas, Upanishads, and Yoga Sūtras. Patañjali names AUM (praṇava) as the symbol of Īśvara — the principle of pure awareness — in Yoga Sūtras I.27. It is not a religious invocation but a tuning of attention.' },
       ],
@@ -63,7 +63,7 @@ export const MOVEMENT_DECK_L1 = [
                   {
                     pattern: 'Intra-abdominal pressure for spinal stability',
                     description: 'a well-timed diaphragm co-contracts with transverse abdominis and pelvic floor to create the pressure that supports the lumbar spine before every movement.',
-                    trains: 'the deep stabilization system (diaphragm, TrA, pelvic floor, multifidus)',
+                    trains: 'the deep stabilization system (diaphragm, transverse abdominis, pelvic floor, multifidus)',
                   },
                   {
                     pattern: 'Parasympathetic down-regulation',
@@ -117,8 +117,8 @@ export const MOVEMENT_DECK_L1 = [
                   },
                   {
                     pattern: 'Parasympathetic activation',
-                    description: 'slow paced breathing near 6 cycles per minute reliably increases vagally-mediated HRV and shifts the nervous system toward rest-and-digest.',
-                    trains: 'vagal tone, baroreflex sensitivity',
+                    description: 'slow paced breathing near 6 cycles per minute reliably increases heart rate variability and shifts the nervous system toward rest-and-digest.',
+                    trains: 'vagal tone, heart rate variability',
                   },
                   {
                     pattern: 'Cognitive steadying under stress',
@@ -590,7 +590,7 @@ export const MOVEMENT_DECK_L1 = [
         id: 'open',
         label: 'Open',
         subtitle: 'Creating space',
-        desc: 'The hips, shoulders, and thoracic spine have the most to release. These poses go into the places that tighten most under modern life — long days at a desk, long hours in a car, sustained stress.',
+        desc: 'The hips, shoulders, and mid-back carry the tension of desk hours, driving, and sustained stress. These poses go into those places directly.',
         cards: [
           {
             id: 'warrior-1',
@@ -677,7 +677,7 @@ export const MOVEMENT_DECK_L1 = [
                   },
                   {
                     pattern: 'Outer-hip stability under load',
-                    description: 'the front leg\'s glute medius and deep rotators work to keep the knee tracking over the ankle — qualified per Lehecka 2021 for double-leg stance.',
+                    description: 'the front leg\'s glute medius and deep rotators work to keep the knee tracking over the ankle. In a double-leg stance like this, the demand is moderate but meaningful.',
                     trains: 'glute medius, deep external rotators',
                   },
                   {
@@ -708,7 +708,7 @@ export const MOVEMENT_DECK_L1 = [
             sanskrit: 'Malasana',
             image: 'deep-squat.png',
             brief: 'The deepest ankle bend in yoga — and the one that reveals most about what the whole lower body can and can\'t do.',
-            mnemonic: 'If heels rise, place a blanket beneath them. Limited ankle mobility is one of the most overlooked sources of knee and back pain.',
+            mnemonic: 'If heels rise, place a blanket beneath them. Limited ankle mobility is an overlooked source of knee and back pain.',
             tabs: [
               {
                 label: 'How to Enter',
@@ -817,7 +817,7 @@ export const MOVEMENT_DECK_L1 = [
             term: 'Pigeon Prep',
             sanskrit: 'Eka Pada Rajakapotasana',
             image: 'pigeon-prep.png',
-            brief: 'The deepest hip opener in yoga. Goes directly to the place that tightens most — and protects the knee and lower back when it releases.',
+            brief: 'A deep hip opener. Goes directly into the outer hip and hip flexors, and protects the knee and lower back when it releases.',
             mnemonic: 'From downward dog, bring the knee to the wrist, shin diagonal. Square the hips. Fold forward. Hold and breathe.',
             tabs: [
               {
@@ -856,7 +856,7 @@ export const MOVEMENT_DECK_L1 = [
                 label: 'Good For',
                 shape: 'good-for',
                 content: {
-                  summary: 'Hip tightness after running, cycling, or long days in the car. One of the most effective recovery poses available.',
+                  summary: 'Hip tightness after running, cycling, or long days in the car. An effective recovery pose for the hips.',
                   scenarios: [
                     'The day after a long run, when the hips feel locked',
                     'Recovery after cycling — the hip rotators shorten in the saddle',
@@ -880,7 +880,7 @@ export const MOVEMENT_DECK_L1 = [
             term: 'Triangle Pose',
             sanskrit: 'Trikonasana',
             image: 'triangle-pose.png',
-            brief: 'A full-length lateral stretch — the side of the body rarely gets this kind of attention.',
+            brief: 'A long lateral stretch through the full side body.',
             mnemonic: 'Keep both sides of the waist long. Chest open toward the ceiling, not rotated toward the floor.',
             tabs: [
               {
@@ -1000,7 +1000,7 @@ export const MOVEMENT_DECK_L1 = [
                   { text: 'From standing, shift your weight onto one foot.' },
                   { text: 'Hinge forward from the hip, extending the back leg toward horizontal.' },
                   { text: 'Arms reach forward, out to the sides, or back along the body.' },
-                  { text: 'Keep both hips square to the floor — the lifted-leg hip wants to rotate open.' },
+                  { text: 'Keep both hips square to the floor — the lifted-leg hip tends to rotate open.' },
                   { text: 'Hold 5–8 breaths, then switch. Use a wall or chair while building strength.' },
                 ],
               },
@@ -1070,7 +1070,7 @@ export const MOVEMENT_DECK_L1 = [
                   },
                   {
                     pattern: 'Hip abduction isolation',
-                    description: 'the standing leg\'s glute medius works at roughly 40–60% MVIC in single-leg stance — meaningful loading per research on single-leg hip activation.',
+                    description: 'the standing leg\'s glute medius works hard in single-leg stance. Research on single-leg hip activation shows meaningful loading in this position.',
                     trains: 'glute medius, deep external rotators',
                   },
                   {
@@ -1189,7 +1189,7 @@ export const MOVEMENT_DECK_L1 = [
                   {
                     pattern: 'Anti-extension holds',
                     description: 'the deep core keeps the lumbar spine from collapsing back under the load of the lifted legs.',
-                    trains: 'TrA, rectus abdominis, obliques',
+                    trains: 'transverse abdominis, rectus abdominis, obliques',
                   },
                   {
                     pattern: 'Neutral-spine awareness',
@@ -1248,7 +1248,7 @@ export const MOVEMENT_DECK_L1 = [
                   {
                     pattern: 'Segmental articulation',
                     description: 'rolling up and down one vertebra at a time is direct motor-control training for the deep spinal system.',
-                    trains: 'multifidus, TrA, segmental spinal control',
+                    trains: 'multifidus, transverse abdominis, segmental spinal control',
                   },
                 ],
               },
@@ -1259,7 +1259,7 @@ export const MOVEMENT_DECK_L1 = [
                   summary: 'Lower back tightness, or after extended time in compressed, forward posture.',
                   scenarios: [
                     'After long hours at a desk or in a car',
-                    'When glutes have gone quiet from sitting',
+                    'When glutes are underactive from sitting',
                     'Pre-hike to wake up the posterior chain',
                     'When lower back is locked and hip flexors are tight',
                   ],
@@ -1496,7 +1496,7 @@ export const MOVEMENT_DECK_L1 = [
             term: 'Supine Twist',
             sanskrit: 'Supta Matsyendrasana',
             image: 'supine-twist.png',
-            brief: 'The spine wrings itself out. A gentle, supported twist that releases what the rest of the practice stirred up.',
+            brief: 'A gentle, supported twist that releases what the rest of the practice stirred up.',
             mnemonic: 'Let the twist be passive — no forcing. The floor supports everything. A two-for-one: lumbar release and outer hip stretch.',
             tabs: [
               {
@@ -1680,7 +1680,7 @@ export const MOVEMENT_DECK_L1 = [
                   {
                     pattern: 'Parasympathetic recovery',
                     description: 'the nervous system shifts from the active, effortful state into rest-and-digest — the state in which adaptation and integration actually happen.',
-                    trains: 'vagal tone, HPA axis downregulation',
+                    trains: 'vagal tone, stress-response downregulation',
                   },
                   {
                     pattern: 'Offline consolidation during rest',

@@ -21,7 +21,7 @@ export const PRINCIPLES = [
     symbol: '◎',
     color: '#B8824A',
     chapterNumber: 'CHAPTER ONE',
-    description: 'The practices in this chapter share one aim: clearing the lens. Across traditions — Hindu breath science, Buddhist meditation, Zen openness, Stoic clarity — the instruction is the same. Stop. Attend. See what is actually here before the mind adds its commentary. Presence is not a state to achieve. It is the ground beneath every other practice.',
+    description: 'The practices in this chapter share one aim: clearing the lens. Across traditions, the instruction is the same. Stop. Attend. See what is actually here before the mind adds its commentary. Presence is not a state to achieve. It is the ground beneath every other practice.',
     wild: 'Wilderness demands presence without asking for it. The trail that requires your full attention. The ridge where one wrong step has consequences. The dawn that arrives whether or not you are watching. Nature has always been the simplest teacher of attention.',
     practice: 'Notice the first thing that catches your eye this morning. Stay with it for three breaths before the mind names it.',
     concepts: ['Yamas', 'Prānāyāma', 'Zazen', 'Samādhi', 'Dichotomy of Control', 'Premeditatio Malorum'],
@@ -45,7 +45,7 @@ export const PRINCIPLES = [
     symbol: '≈',
     color: '#4A7A8A',
     chapterNumber: 'CHAPTER THREE',
-    description: 'These teachings share a common recognition: reality is not still, and the wise response is not resistance. The Taoist moves with the grain. The Buddhist watches everything arise and pass. The Stoic loves what fate delivers. Flow is not passivity — it is the skill of reading what is actually happening and responding without friction.',
+    description: 'These teachings share a common recognition: reality is not still, and the wise response is not resistance. The Taoist moves with the grain. The Buddhist watches everything arise and pass. The Stoic loves what fate delivers. Flow is not passivity. It is the skill of reading what is actually happening and responding without friction.',
     wild: 'A river never forces its way to the sea. A tree grows toward light without a plan. The season turns without asking permission. In wild places, flow is the default — it is only the human mind that insists on forcing.',
     practice: 'Notice where you are pushing against something today. See what happens if you ease instead.',
     concepts: ['Wu Wei', 'Anicca', 'Zhuangzi', 'Pu', 'Te', 'Amor Fati'],
@@ -57,7 +57,7 @@ export const PRINCIPLES = [
     symbol: '◇',
     color: '#A85C4A',
     chapterNumber: 'CHAPTER FOUR',
-    description: 'The heart is not separate from wisdom — it is wisdom\'s instrument. These teachings orient the practitioner outward: toward the suffering of others, toward service without reward, toward love that asks nothing back. Compassion is not softness. It is the hardest discipline in every tradition that teaches it.',
+    description: 'The heart is not separate from wisdom. It is wisdom\'s instrument. These teachings orient the practitioner outward: toward the suffering of others, toward service without reward, toward love that asks nothing back. Compassion is not softness. It is a demanding discipline in every tradition that teaches it.',
     wild: 'In wild places, care becomes tangible. The trail maintained by hands you will never thank. The ecosystem held together by relationships you cannot see. The creature whose suffering is as real as yours. Compassion in nature is not abstract — it is the quality of attention you bring to what is alive around you.',
     practice: 'Notice one thing today that is struggling. Stay with it for a moment before moving on.',
     concepts: ['Mettā', 'Karuṇā', 'Bhakti', 'Seva', 'Virtue', 'Ubuntu'],
@@ -100,8 +100,8 @@ export const CARDS = [
     teaching: 'Five restraints forming the moral foundation of yoga: non-violence, truthfulness, non-stealing, right use of energy, and non-possessiveness. Not rules handed down — observations about what creates suffering and what releases it.',
     origin: 'Codified by Patañjali as the first of eight limbs in the Yoga Sūtras (~2nd century CE). The outer practices that make the inner ones possible.',
     journey: 'In the wild, the Yamas clarify fast. Non-violence toward trail, animal, weather. Truthfulness about your limits. Non-possessiveness toward the view — you can\'t keep it, only meet it.',
-    quote: 'Yoga is the cessation of the movements of the mind. Then there is abiding in the Seer\'s own form.',
-    quoteAuthor: 'Patañjali, Yoga Sūtras 1.2',
+    quote: 'When one is established in non-harming, all enmity ceases in their presence.',
+    quoteAuthor: 'Patañjali, Yoga Sūtras 2.35',
     deepDive: {
       shape: 'list',
       items: [
@@ -188,7 +188,7 @@ export const CARDS = [
     deepDive: {
       shape: 'prose',
       paragraphs: [
-        { text: 'The Stoic practice of mentally rehearsing what could go wrong — not to induce anxiety, but to remove its power to surprise. By imagining the worst, you discover you can handle it.' },
+        { text: 'The Stoic practice of mentally rehearsing what could go wrong. Not to induce anxiety, but to remove its power to surprise. By imagining the worst, you discover you can handle it.' },
         { text: 'Seneca practiced it as a habitual discipline; Marcus Aurelius made it his morning ritual. The opening of Meditations 2.1: "At daybreak tell yourself — I shall meet with the busybody, the ungrateful, the arrogant, the deceitful, the envious."' },
         { text: 'When difficulty arrives unrehearsed, it surprises and overwhelms. When it has already been met in imagination, it arrives as familiar weather. You have already done the work.' },
       ],
@@ -516,7 +516,7 @@ export const CARDS = [
     id: 'satoyama', principle: 'reverence', tradition: 'shinto', name: 'Satoyama', pronunciation: 'SAH-toh-yah-mah', tag: 'THE IN-BETWEEN LAND',
     teaching: 'Satoyama describes the borderland between mountain wilderness and human settlement — the managed woodlands, terraced fields, and forest edges that formed Japan\'s traditional rural landscape. It is the place where nature and culture live in relationship, not opposition.',
     origin: 'A Japanese concept embedded in traditional land management. The International Partnership for the Satoyama Initiative (IPSI) was formally established at the Convention on Biological Diversity COP 10 in Nagoya, Japan, in October 2010, as a joint project of Japan\'s Ministry of the Environment and the United Nations University.',
-    journey: 'At the edge of a trail where forest meets meadow, or where a river valley opens into farmland — that threshold is satoyama in spirit. Neither purely wild nor purely tamed. The most biodiverse, most alive.',
+    journey: 'At the edge of a trail where forest meets meadow, or where a river valley opens into farmland — that threshold is satoyama in spirit. Neither purely wild nor purely tamed. Often the most biodiverse place in the landscape.',
     quote: 'The clearest way into the Universe is through a forest wilderness.',
     quoteAuthor: 'John Muir',
     deepDive: {
@@ -546,7 +546,7 @@ export const CARDS = [
   },
   {
     id: 'mementomori', principle: 'reverence', tradition: 'stoicism', name: 'Memento Mori', pronunciation: 'meh-MEN-toh MOR-ee', tag: 'REMEMBER DEATH',
-    teaching: 'The Stoic practice of contemplating mortality — not as morbidity, but as clarifying force. At Roman triumphs, a slave would whisper into the general\'s ear: \'Remember, thou art mortal.\' The reminder at the peak of glory. Not to induce fear — to create urgency.',
+    teaching: 'The Stoic practice of contemplating mortality, not as morbidity but as clarifying force. At Roman triumphs, a slave would whisper into the general\'s ear: \'Remember, thou art mortal.\' The reminder at the peak of glory. Not to induce fear. To create urgency.',
     origin: 'Practiced throughout Stoic philosophy. Marcus Aurelius returned to it repeatedly in his private journal. Seneca wrote entire letters on the subject — not to depress but to clarify priority and eliminate waste.',
     journey: 'Standing on a ridge at dawn, knowing you will not always be able to stand here — the view sharpens. This is what memento mori is for.',
     quote: 'You could leave life right now. Let that determine what you do and say and think.',
@@ -555,7 +555,7 @@ export const CARDS = [
       shape: 'prose',
       paragraphs: [
         { text: 'The practice of deliberately contemplating mortality — not as morbidity, but as clarifying force. Remember that you will die, and ask: what matters, given this?' },
-        { text: 'The practice itself — meletē thanatou, "rehearsing death" — runs straight through the Stoics from Plato\'s Phaedo. The Latin phrase memento mori comes to us through later Christian use, but Marcus Aurelius and Seneca were practicing it by other names — not to darken life but to sharpen priority.' },
+        { text: 'The practice itself — meletē thanatou, "rehearsing death" — runs straight through the Stoics from Plato\'s Phaedo. The Latin phrase memento mori comes to us through later Christian use, but Marcus Aurelius and Seneca were practicing it by other names. Not to darken life but to sharpen priority.' },
         { text: 'The reminder is not "you are going to die" as despair. It is "you are going to die" as clarity — and therefore: do what matters now, and release what doesn\'t.' },
       ],
     },

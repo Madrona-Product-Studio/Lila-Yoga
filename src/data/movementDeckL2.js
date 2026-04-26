@@ -20,21 +20,21 @@ export const MOVEMENT_DECK_L2 = [
     id: "deep-core",
     title: "The Deep Core",
     subtitle: "The invisible architecture",
-    desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber — diaphragm on top, pelvic floor below, deep muscles wrapping the sides. When it works, your spine is protected before you even think about moving. When it doesn't, everything else compensates.",
+    desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber: diaphragm on top, pelvic floor below, deep muscles wrapping the sides. When it works, your spine is protected before you even think about moving. When it doesn't, everything else compensates.",
     accent: "#2D6B6B",
     groups: [
       {
         id: "deep-core-cards",
         label: "The Deep Core",
         subtitle: "The invisible architecture",
-        desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber — diaphragm on top, pelvic floor below, deep muscles wrapping the sides.",
+        desc: "Your deepest layer of stability isn't muscle you can see or flex. It's a pressurized chamber: diaphragm on top, pelvic floor below, deep muscles wrapping the sides.",
         icon: "◎",
         cards: [
           {
             id: "core-canister",
             term: "The Core Canister",
-            brief: "The body's true core — a pressurized chamber with the diaphragm as the lid, pelvic floor as the base, and transverse abdominis as the walls.",
-            mnemonic: "Think of a sealed soda can. The pressure inside is what keeps it rigid. Your core works the same way — internal pressure, not surface muscles, creates spinal stability.",
+            brief: "The body's true core: a pressurized chamber with the diaphragm as the lid, pelvic floor as the base, and transverse abdominis as the walls.",
+            mnemonic: "Think of a sealed soda can. The pressure inside is what keeps it rigid. Your core works the same way. Internal pressure, not surface muscles, creates spinal stability.",
             image: "core-canister.png",
             tabs: [
               {
@@ -45,7 +45,7 @@ export const MOVEMENT_DECK_L2 = [
                 label: "Activates",
                 content: [
                   { pattern: "Pressurization breathing", description: "breath drills that train 360° expansion and build intra-abdominal pressure", examples: ["Diaphragmatic breath", "90/90 breathing", "Crocodile breathing"] },
-                  { pattern: "Anti-extension holds", description: "resisting the low back's urge to arch while the limbs load the system", examples: ["Dead bug", "Hollow body hold"] },
+                  { pattern: "Anti-extension holds", description: "resisting the tendency of the low back to arch while the limbs load the system", examples: ["Dead bug", "Hollow body hold"] },
                   { pattern: "Contralateral stability", description: "opposite-side limb movement that demands the whole canister co-contract", examples: ["Bird dog"] },
                 ],
               },
@@ -58,13 +58,13 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "diaphragm",
             term: "Diaphragm",
-            brief: "The primary breathing muscle — a dome-shaped sheet that forms the roof of the core canister and regulates spinal stability.",
-            mnemonic: "DIA = across, PHRAGM = partition. It's the partition across your trunk. When the dome drops, air rushes in — and your spine gets stiffer.",
+            brief: "The primary breathing muscle. A dome-shaped sheet that forms the roof of the core canister and regulates spinal stability.",
+            mnemonic: "DIA = across, PHRAGM = partition. It's the partition across your trunk. When the dome drops, air rushes in, and your spine gets stiffer.",
             image: "diaphragm.png",
             tabs: [
               {
                 label: "Details",
-                content: "The diaphragm is a dome-shaped muscle sitting beneath the lungs, separating the thoracic and abdominal cavities. During inhalation, it contracts and flattens downward, creating negative pressure that draws air into the lungs while simultaneously increasing intra-abdominal pressure below. During exhalation, it relaxes back into its dome shape. Beyond breathing, the diaphragm is a critical postural stabilizer — it must coordinate with the pelvic floor, TVA, and multifidus to generate the intra-abdominal pressure that stiffens the spine before movement. Research by Hodges and Gandevia confirmed that the diaphragm increases its postural activity in anticipation of limb loading, independent of its respiratory role. Chronic chest breathing — bypassing the diaphragm — impairs this pressure system and keeps the nervous system in a low-grade stress state.",
+                content: "The diaphragm is a dome-shaped muscle sitting beneath the lungs, separating the thoracic and abdominal cavities. During inhalation, it contracts and flattens downward, creating negative pressure that draws air into the lungs while simultaneously increasing intra-abdominal pressure below. During exhalation, it relaxes back into its dome shape. Beyond breathing, the diaphragm is a postural stabilizer. It must coordinate with the pelvic floor, TVA, and multifidus to generate the intra-abdominal pressure that stiffens the spine before movement. Research by Hodges and Gandevia confirmed that the diaphragm increases its postural activity in anticipation of limb loading, independent of its respiratory role. Chronic chest breathing, which bypasses the diaphragm, impairs this pressure system and keeps the nervous system in a low-grade stress state.",
               },
               {
                 label: "Activates",
@@ -84,19 +84,19 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "transverse-abdominis",
             term: "Transverse Abdominis (TVA)",
-            brief: "The deepest abdominal muscle — a horizontal corset that wraps around the trunk and is the body's first line of spinal defense.",
+            brief: "The deepest abdominal muscle. A horizontal corset that wraps the trunk and is the body's first line of spinal defense.",
             mnemonic: "TRANSverse = it runs TRANSversely (horizontally). Think of it as your internal weight belt — not the one you wear, the one you were born with.",
             image: "transverse-abdominis.png",
             tabs: [
               {
                 label: "Details",
-                content: "The TVA runs horizontally from the thoracolumbar fascia at the back, around the sides, to the linea alba at the front — like a corset encircling the trunk. Unlike the rectus abdominis (which flexes the spine), the TVA's primary role is stabilization: it increases intra-abdominal pressure and stiffens the thoracolumbar fascia to protect the lumbar spine from shear forces. Research by Hodges and Richardson (1996) demonstrated that in healthy individuals, the TVA activates 30–110ms before limb movement — a pre-emptive stabilizing response. In people with chronic low back pain, this timing is consistently delayed. The TVA cannot function in isolation: it requires co-activation of the pelvic floor (below) and diaphragm (above) to effectively increase intra-abdominal pressure.",
+                content: "The TVA runs horizontally from the thoracolumbar fascia at the back, around the sides, to the linea alba at the front, like a corset encircling the trunk. Unlike the rectus abdominis (which flexes the spine), the TVA's primary role is stabilization: it increases intra-abdominal pressure and stiffens the thoracolumbar fascia to protect the lumbar spine from shear forces. Research by Hodges and Richardson (1996) demonstrated that in healthy individuals, the TVA activates 30–110ms before limb movement — a pre-emptive stabilizing response. In people with chronic low back pain, this timing is consistently delayed. The TVA cannot function in isolation: it requires co-activation of the pelvic floor (below) and diaphragm (above) to effectively increase intra-abdominal pressure.",
               },
               {
                 label: "Activates",
                 content: [
                   { pattern: "Integrated bracing", description: "360° pressurization of the abdominal wall under load — the way the deep core actually stabilizes the spine during loaded movement", examples: ["Braced deadlift", "Braced carry", "Braced press"] },
-                  { pattern: "Anti-extension holds", description: "resisting the low back's urge to arch while the limbs move", examples: ["Dead bug", "Hollow body hold"] },
+                  { pattern: "Anti-extension holds", description: "resisting the tendency of the low back to arch while the limbs move", examples: ["Dead bug", "Hollow body hold"] },
                   { pattern: "Anti-rotation work", description: "resisting rotational force through the trunk while staying square", examples: ["Pallof press", "Bird dog"] },
                   { pattern: "Drawing-in (motor-control relearning)", description: "isolating the deep abdominal wall without engaging the outer core — a remedial drill for reconnecting with the deep system when coordination has been disrupted, not a substitute for bracing under load", examples: ["Drawing-in maneuver"] },
                 ],
@@ -110,13 +110,13 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "pelvic-floor",
             term: "Pelvic Floor",
-            brief: "A hammock of muscles at the base of the pelvis — the floor of the core canister and an often-ignored foundation of whole-body stability.",
+            brief: "A hammock of muscles at the base of the pelvis. The floor of the core canister and an often-overlooked foundation of whole-body stability.",
             mnemonic: "The pelvic floor is the base of the can. Without a solid base, the can collapses — no matter how strong the sides are.",
             image: "pelvic-floor.png",
             tabs: [
               {
                 label: "Details",
-                content: "The pelvic floor is a group of muscles and connective tissues forming a hammock-like structure spanning the base of the pelvis, from the pubic bone at the front to the coccyx at the back. It supports the bladder, bowel, and reproductive organs, controls continence, and — critically — forms the base of the core pressure system. The pelvic floor and TVA are synergistic: they co-contract simultaneously. During inhalation, the diaphragm descends and the pelvic floor gently lengthens; during exhalation, the diaphragm rises and the pelvic floor lifts. This piston-like relationship is the foundation of efficient intra-abdominal pressure management. When this coordination is disrupted, the pelvic floor bears excessive load — contributing to incontinence, prolapse, and pelvic pain.",
+                content: "The pelvic floor is a group of muscles and connective tissues forming a hammock-like structure spanning the base of the pelvis, from the pubic bone at the front to the coccyx at the back. It supports the bladder, bowel, and reproductive organs, controls continence, and forms the base of the core pressure system. The pelvic floor and TVA are synergistic: they co-contract simultaneously. During inhalation, the diaphragm descends and the pelvic floor gently lengthens; during exhalation, the diaphragm rises and the pelvic floor lifts. This piston-like relationship is the foundation of efficient intra-abdominal pressure management. When this coordination is disrupted, the pelvic floor bears excessive load — contributing to incontinence, prolapse, and pelvic pain.",
               },
               {
                 label: "Activates",
@@ -135,7 +135,7 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "multifidus",
             term: "Multifidus",
-            brief: "The deepest back muscle — running along the spine's posterior wall and providing segment-by-segment stabilization of each vertebra.",
+            brief: "The deepest back muscle. It runs along the spine's posterior wall and provides segment-by-segment stabilization of each vertebra.",
             mnemonic: "MULTI = many, FIDUS = faithful (Latin). Many faithful supporters of the spine — one for each vertebra, holding each level steady.",
             image: "multifidus.png",
             tabs: [
@@ -169,14 +169,14 @@ export const MOVEMENT_DECK_L2 = [
     id: "pelvis-hips",
     title: "The Pelvis & Hips",
     subtitle: "Where power lives",
-    desc: "The pelvis is the crossroads — spine above, legs below, core wrapping around it. Every force you generate passes through here. The muscles that control it determine how you walk, how you stand, and whether your back hurts. This is where power originates.",
+    desc: "The pelvis is the crossroads: spine above, legs below, core wrapping around it. Every force you generate passes through here. The muscles that control it determine how you walk, how you stand, and whether your back hurts. This is where power originates.",
     accent: "#8A6B4A",
     groups: [
       {
         id: "pelvis-hips-cards",
         label: "The Pelvis & Hips",
         subtitle: "Where power lives",
-        desc: "The pelvis is the crossroads — spine above, legs below, core wrapping around it. Every force you generate passes through here.",
+        desc: "The pelvis is the crossroads: spine above, legs below, core wrapping around it. Every force you generate passes through here.",
         icon: "◇",
         cards: [
           {
@@ -213,7 +213,7 @@ export const MOVEMENT_DECK_L2 = [
             tabs: [
               {
                 label: "Details",
-                content: "The iliopsoas is formed by the union of the iliacus (originating from the inner surface of the ilium) and the psoas major (originating from the bodies and transverse processes of T12-L5 vertebrae). They merge into a single tendon attaching to the lesser trochanter of the femur. Because the psoas attaches directly to the lumbar vertebrae, a tight or overactive psoas creates an anterior pull on the lumbar spine — increasing lordosis and contributing to anterior pelvic tilt. The iliopsoas is also a critical stabilizer of the lumbar spine in upright posture, functioning differently in standing than in sitting. Chronic shortening from prolonged sitting is one of the most prevalent movement dysfunctions in modern humans.",
+                content: "The iliopsoas is formed by the union of the iliacus (originating from the inner surface of the ilium) and the psoas major (originating from the bodies and transverse processes of T12-L5 vertebrae). They merge into a single tendon attaching to the lesser trochanter of the femur. Because the psoas attaches directly to the lumbar vertebrae, a tight or overactive psoas creates an anterior pull on the lumbar spine — increasing lordosis and contributing to anterior pelvic tilt. The iliopsoas is also a critical stabilizer of the lumbar spine in upright posture, functioning differently in standing than in sitting. Chronic shortening from prolonged sitting is a common movement dysfunction in people who sit for long hours.",
               },
               {
                 label: "Activates",
@@ -268,7 +268,7 @@ export const MOVEMENT_DECK_L2 = [
               {
                 label: "Activates",
                 content: [
-                  { pattern: "Hip abduction isolation", description: "isolated work that targets the glute med through pure abduction — builds baseline activation when the muscle has gone quiet", examples: ["Clamshell", "Side-lying leg raise", "Lateral band walk"] },
+                  { pattern: "Hip abduction isolation", description: "isolated work that targets the glute med through pure abduction — builds baseline activation when the muscle is underactive", examples: ["Clamshell", "Side-lying leg raise", "Lateral band walk"] },
                   { pattern: "Frontal-plane stability", description: "single-leg work where the glute med's real job shows up — controlling the pelvis during single-leg stance, which is as much a motor-control task as a strength task (why single-leg work matters more than isolated abduction alone)", examples: ["Single-leg deadlift", "Single-leg squat", "Single-leg glute bridge"] },
                 ],
               },
@@ -281,8 +281,8 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "hip-joint",
             term: "The Hip Joint",
-            brief: "A deep ball-and-socket joint — the most mobile and inherently stable joint in the lower body, capable of movement in all three planes.",
-            mnemonic: "ACET-abulum = little cup (Latin: acetum = vinegar cup). The femoral ball sits in the hip's \"cup.\" The deeper the cup, the more stable the joint. The hip's cup is deep — unlike the shoulder, the hip doesn't rely on muscles alone for stability.",
+            brief: "A deep ball-and-socket joint. The lower body's most mobile and inherently stable joint, capable of movement in all three planes.",
+            mnemonic: "ACET-abulum = little cup (Latin: acetum = vinegar cup). The femoral ball sits in the hip's \"cup.\" The deeper the cup, the more stable the joint. The hip's cup is deep. Unlike the shoulder, the hip doesn't rely on muscles alone for stability.",
             image: "hip-joint.png",
             tabs: [
               {
@@ -316,7 +316,7 @@ export const MOVEMENT_DECK_L2 = [
     id: "spine-shoulder",
     title: "The Spine & Shoulder",
     subtitle: "The chain above",
-    desc: "The spine is not a rigid pole — it's a spring-loaded stack of 24 movable vertebrae. The shoulder trades stability for range of motion — more freedom than any other joint, but less structural protection. Understanding both changes how you move through everything.",
+    desc: "The spine is not a rigid pole. It's a spring-loaded stack of 24 movable vertebrae. The shoulder trades stability for range of motion: more freedom than any other joint, but less structural protection. Understanding both changes how you move through everything.",
     accent: "#6B8FA8",
     groups: [
       {
@@ -354,7 +354,7 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "thoracic-spine",
             term: "The Thoracic Spine",
-            brief: "The mid-back (T1-T12) — the body's primary rotational region and the most chronically stiff segment in modern humans.",
+            brief: "The mid-back (T1-T12). The body's primary rotational region, and a chronically stiff segment in people who sit at desks.",
             mnemonic: "The thoracic spine is the trunk of the body's rotational tree. When the trunk is stiff, the branches (neck, lower back) bend more than they should — and eventually break.",
             image: "thoracic-spine.png",
             tabs: [
@@ -372,7 +372,7 @@ export const MOVEMENT_DECK_L2 = [
               },
               {
                 label: "Injury Risk",
-                content: "Thoracic stiffness is one of the most undertreated contributors to both lower back pain and shoulder impingement. When the thoracic spine does not rotate adequately for overhead movements, the shoulder compensates with excessive glenohumeral movement — compressing the rotator cuff against the acromion. When it does not extend adequately for backbends, the lumbar spine hyperextends to compensate.",
+                content: "Thoracic stiffness contributes to both lower back pain and shoulder impingement, and is often overlooked in treatment. When the thoracic spine does not rotate adequately for overhead movements, the shoulder compensates with excessive glenohumeral movement — compressing the rotator cuff against the acromion. When it does not extend adequately for backbends, the lumbar spine hyperextends to compensate.",
               },
             ],
           },
@@ -489,14 +489,14 @@ export const MOVEMENT_DECK_L2 = [
     id: "lower-body",
     title: "The Lower Body",
     subtitle: "Ground contact",
-    desc: "Force enters your body through the ground and travels upward — foot to ankle to knee to hip. Each joint has a job. When one fails to do it, the next one in line absorbs the load. Most lower body injuries are compensation injuries — the joint that hurts is covering for the joint that won't move.",
+    desc: "Force enters your body through the ground and travels upward: foot to ankle to knee to hip. Each joint has a job. When one can't do it, the next one absorbs the load. Many lower body injuries are compensation injuries — the joint that hurts is covering for the joint that won't move.",
     accent: "#7A9E8A",
     groups: [
       {
         id: "lower-body-cards",
         label: "The Lower Body",
         subtitle: "Ground contact",
-        desc: "Force enters through the ground and travels up. Each joint has a job. When one fails, the next one absorbs the load.",
+        desc: "Force enters through the ground and travels up. Each joint has a job. When one can't do it, the next one absorbs the load.",
         icon: "△",
         cards: [
           {
@@ -533,7 +533,7 @@ export const MOVEMENT_DECK_L2 = [
             tabs: [
               {
                 label: "Details",
-                content: "The knee primarily flexes and extends but permits slight internal and external rotation in flexed positions. It is stabilized by the ACL (anterior cruciate ligament, prevents forward tibial translation), PCL (posterior, prevents backward tibial translation), MCL (medial, resists valgus), and LCL (lateral, resists varus). The medial and lateral menisci are crescent-shaped fibrocartilaginous structures that deepen the tibial plateau, distribute load, and absorb shock. The patella increases the mechanical advantage of the quadriceps by acting as a pulley. Because the knee sits between two long levers (femur and tibia), its health depends heavily on the control provided by the hip above and the ankle and foot below — it is primarily a victim of problems elsewhere.",
+                content: "The knee primarily flexes and extends but permits slight internal and external rotation in flexed positions. It is stabilized by the ACL (anterior cruciate ligament, prevents forward tibial translation), PCL (posterior, prevents backward tibial translation), MCL (medial, resists valgus), and LCL (lateral, resists varus). The medial and lateral menisci are crescent-shaped fibrocartilaginous structures that deepen the tibial plateau, distribute load, and absorb shock. The patella increases the mechanical advantage of the quadriceps by acting as a pulley. Because the knee sits between two long levers (femur and tibia), its health depends heavily on the control provided by the hip above and the ankle and foot below — problems at the knee are usually caused by dysfunction elsewhere.",
               },
               {
                 label: "Activates",
@@ -552,7 +552,7 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "it-band-tfl",
             term: "IT Band & TFL",
-            brief: "The iliotibial band is a thick strip of fascia running from the hip to the shin — the lateral stabilizer of the knee, and one of the most commonly irritated structures in runners.",
+            brief: "The iliotibial band is a thick strip of fascia running from the hip to the shin. The lateral stabilizer of the knee, and a commonly irritated structure in runners.",
             mnemonic: "IT band = the body's lateral guy-wire. Like the cable on a sailboat mast, it keeps the knee from collapsing inward. But unlike a cable, it can't be stretched — it can only be loaded and unloaded differently.",
             image: "it-band-tfl.png",
             tabs: [
@@ -571,14 +571,14 @@ export const MOVEMENT_DECK_L2 = [
               },
               {
                 label: "Injury Risk",
-                content: "IT band syndrome is the most common running injury. Its root cause is almost always hip weakness (glute med, glute max) rather than a \"tight IT band.\" Foam rolling the IT band directly may provide temporary pain relief but does not address the underlying cause.",
+                content: "IT band syndrome is the most common running injury. The root cause is usually hip weakness (glute med, glute max) rather than a \"tight IT band.\" Foam rolling the IT band directly may provide temporary pain relief but does not address the underlying cause.",
               },
             ],
           },
           {
             id: "ankle-foot",
             term: "Ankle & Foot",
-            brief: "The body's foundation — and a joint where limited mobility silently drives compensations all the way up to the knee, hip, and spine.",
+            brief: "The body's foundation. Limited ankle mobility silently drives compensations up to the knee, hip, and spine.",
             mnemonic: "The ankle is the foundation of the lower body's tower. A compromised foundation forces every floor above it to compensate. Limited ankle range of motion is one of the most underappreciated drivers of knee and back pain.",
             image: "ankle-foot.png",
             tabs: [
@@ -613,14 +613,14 @@ export const MOVEMENT_DECK_L2 = [
     id: "how-it-works",
     title: "How It All Works Together",
     subtitle: "Patterns, not parts",
-    desc: "The body is not a collection of independent muscles — it is a system of linked joints, fascial chains, and movement patterns. These cards give you the vocabulary to understand how the pieces connect, why modern life creates predictable dysfunctions, and where to look when something hurts.",
+    desc: "Your joints, muscles, and connective tissue work as a linked system. These cards give you vocabulary for how the pieces connect, why sitting and screens create predictable problems, and where to look when something hurts.",
     accent: "#A85C4A",
     groups: [
       {
         id: "how-it-works-cards",
         label: "How It All Works Together",
         subtitle: "Patterns, not parts",
-        desc: "The vocabulary to understand how pieces connect, why modern life creates predictable dysfunctions, and where to look when something hurts.",
+        desc: "Vocabulary for how the pieces connect, why sitting and screens create predictable problems, and where to look when something hurts.",
         icon: "⇄",
         cards: [
           {
@@ -751,13 +751,13 @@ export const MOVEMENT_DECK_L2 = [
           {
             id: "lower-crossed-syndrome",
             term: "Lower Crossed Syndrome",
-            brief: "The most common postural dysfunction in the modern world — a predictable pattern of tight hip flexors and weak glutes creating anterior pelvic tilt and low back pain.",
+            brief: "A predictable pattern of tight hip flexors and weak glutes that creates anterior pelvic tilt and low back pain.",
             mnemonic: "Draw an X across the front of the pelvis. Tight hip flexors (front) cross with weak glutes (back). Weak abdominals (front) cross with tight erector spinae (back). The X tells you who to stretch and who to strengthen.",
             image: "lower-crossed-syndrome.png",
             tabs: [
               {
                 label: "The Concept",
-                content: "Vladimir Janda identified Lower Crossed Syndrome (LCS) as a characteristic pattern of alternating muscle tightness and weakness centered on the pelvis. The tight muscles: hip flexors (iliopsoas, rectus femoris) and lumbar extensors (erector spinae). The weak muscles: deep abdominals (TVA, obliques) and gluteals (maximus and medius). This imbalance creates anterior pelvic tilt, increased lumbar lordosis, and compensatory thoracolumbar junction stiffness. Physiopedia's clinical review notes that LCS is associated with anterior pelvic tilt, increased lumbar lordosis, and compensatory adjustments throughout the kinetic chain. LCS is not a disease — it is the predictable result of how most modern humans live: sitting for prolonged periods, which shortens hip flexors, while the glutes are unloaded and inhibited.",
+                content: "Vladimir Janda identified Lower Crossed Syndrome (LCS) as a characteristic pattern of alternating muscle tightness and weakness centered on the pelvis. The tight muscles: hip flexors (iliopsoas, rectus femoris) and lumbar extensors (erector spinae). The weak muscles: deep abdominals (transverse abdominis, obliques) and gluteals (maximus and medius). This imbalance creates anterior pelvic tilt, increased lumbar lordosis, and compensatory thoracolumbar junction stiffness. Physiopedia's clinical review notes that LCS is associated with anterior pelvic tilt, increased lumbar lordosis, and compensatory adjustments throughout the kinetic chain. LCS is not a disease. It develops from sitting for long periods, which shortens the hip flexors while the glutes go unloaded.",
               },
               {
                 label: "Why It Matters",
@@ -778,7 +778,7 @@ export const MOVEMENT_DECK_L2 = [
             id: "upper-crossed-syndrome",
             term: "Upper Crossed Syndrome",
             brief: "The posture of modern life — tight chest and upper traps cross with weak deep neck flexors and lower traps, creating forward head posture and shoulder impingement.",
-            mnemonic: "Draw an X across the upper body. Tight pecs (front, below) cross with tight upper traps (back, above). Weak deep neck flexors (front, above) cross with weak lower traps and rhomboids (back, below). This X creates the hunched, forward-head posture visible in almost every person using a screen.",
+            mnemonic: "Draw an X across the upper body. Tight pecs (front, below) cross with tight upper traps (back, above). Weak deep neck flexors (front, above) cross with weak lower traps and rhomboids (back, below). This X creates the hunched, forward-head posture common in people who spend hours at a screen.",
             image: "upper-crossed-syndrome.png",
             tabs: [
               {
@@ -810,11 +810,11 @@ export const MOVEMENT_DECK_L2 = [
             tabs: [
               {
                 label: "The Concept",
-                content: "The kinetic chain concept, adapted from engineering by Dr. Arthur Steindler (1955) and widely applied in sports medicine and rehabilitation, describes the body as a series of interconnected segments — joints and muscles — where movement in one segment inevitably influences adjacent segments. A peer-reviewed PMC study (2023) defines the kinetic chain as \"the body's intricate coordination of various segments to perform a specific activity involving precise positioning, timing, and speed.\" The body core (lumbopelvic-hip complex) is the central hub through which forces are transferred between the upper and lower extremities. Disruption at any link — limited ankle mobility, weak hip abductors, restricted thoracic rotation — creates compensatory loading elsewhere. Over time, compensated joints develop pathology from loads they were not designed to sustain.",
+                content: "The kinetic chain concept, adapted from engineering by Dr. Arthur Steindler (1955) and widely applied in sports medicine and rehabilitation, describes the body as a series of interconnected segments — joints and muscles — where movement in one segment inevitably influences adjacent segments. A 2023 peer-reviewed study defines the kinetic chain as \"the body's intricate coordination of various segments to perform a specific activity involving precise positioning, timing, and speed.\" The body core (lumbopelvic-hip complex) is the central hub through which forces are transferred between the upper and lower extremities. Disruption at any link — limited ankle mobility, weak hip abductors, restricted thoracic rotation — creates compensatory loading elsewhere. Over time, compensated joints develop pathology from loads they were not designed to sustain.",
               },
               {
                 label: "Why It Matters",
-                content: "Any blockage or defect in the kinetic chain creates compensatory patterns and overuse injuries in adjacent structures (PMC, 2023). The clinical implication: treatment of the symptomatic site without assessment of the chain above and below it will reliably fail.",
+                content: "Any blockage or defect in the kinetic chain creates compensatory patterns and overuse injuries in adjacent structures. The clinical implication: treatment of the symptomatic site without assessment of the chain above and below it will reliably fail.",
               },
               {
                 label: "What To Do",
@@ -858,7 +858,7 @@ export const MOVEMENT_DECK_L2 = [
             tabs: [
               {
                 label: "The Idea",
-                content: "When one part of the body can't do its job — a stiff joint, a weak muscle, a restricted fascia — the body doesn't stop moving. It reroutes. An adjacent joint picks up the slack, doing work it wasn't designed for. This compensation is silent at first. You don't feel anything wrong because the body is solving the problem for you. But the compensating structure is now under chronic, inappropriate load. Over weeks and months, that load accumulates — until the compensating structure reaches its tolerance limit. That's when you feel pain. The pain is real, but it's the last domino, not the first. The actual problem — the joint or muscle that stopped doing its job — is often painless, quiet, and somewhere else entirely.",
+                content: "When a joint is stiff or a muscle is weak, movement doesn't stop. The load reroutes to an adjacent joint, which picks up work it wasn't designed for. This compensation is silent at first. You don't feel anything wrong because the system is redistributing the load. But the compensating structure is now under chronic, inappropriate stress. Over weeks and months, that stress accumulates until the compensating structure reaches its tolerance limit. That's when you feel pain. The pain is real. It's the last domino, not the first. The actual problem, the stiff or weak structure that started the chain, is often painless and somewhere else entirely.",
               },
               {
                 label: "Why It Changes Everything",

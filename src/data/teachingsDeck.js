@@ -517,8 +517,8 @@ export const CARDS = [
     teaching: 'Satoyama describes the borderland between mountain wilderness and human settlement — the managed woodlands, terraced fields, and forest edges that formed Japan\'s traditional rural landscape. It is the place where nature and culture live in relationship, not opposition.',
     origin: 'A Japanese concept embedded in traditional land management. The International Partnership for the Satoyama Initiative (IPSI) was formally established at the Convention on Biological Diversity COP 10 in Nagoya, Japan, in October 2010, as a joint project of Japan\'s Ministry of the Environment and the United Nations University.',
     journey: 'At the edge of a trail where forest meets meadow, or where a river valley opens into farmland — that threshold is satoyama in spirit. Neither purely wild nor purely tamed. Often the most biodiverse place in the landscape.',
-    quote: 'The clearest way into the Universe is through a forest wilderness.',
-    quoteAuthor: 'John Muir',
+    quote: 'The world cannot be discovered by a journey of miles, only by a spiritual journey of inches.',
+    quoteAuthor: 'Wendell Berry',
     deepDive: {
       shape: 'prose',
       paragraphs: [
@@ -565,8 +565,8 @@ export const CARDS = [
     teaching: 'Wabi-sabi is a Japanese aesthetic philosophy rooted in Zen Buddhism: find beauty in what is imperfect, impermanent, and incomplete. Wabi: the spiritual richness of simplicity and solitude. Sabi: the serene beauty that comes with age, wear, and the passage of time.',
     origin: 'Emerged during Japan\'s medieval era, shaped by Zen Buddhism and the tea ceremony tradition. Crystallized by tea master Sen no Rikyū (1522–1591), who built teahouses with deliberately rough materials and doors so low that even an emperor would have to bow to enter.',
     journey: 'The cracked rock, the weathered sign, the imperfect campsite, the summit obscured by cloud — wabi-sabi is learning to see the rightness in all of it. Not consolation. Recognition.',
-    quote: 'In contemporary Japan, wabi-sabi is often summarized as \'wisdom in natural simplicity.\'',
-    quoteAuthor: 'Japanese aesthetic tradition',
+    quote: 'Though it be broken, broken again still it is there: the moon on the water.',
+    quoteAuthor: 'Chōshū, Japanese verse',
     deepDive: {
       shape: 'list',
       items: [

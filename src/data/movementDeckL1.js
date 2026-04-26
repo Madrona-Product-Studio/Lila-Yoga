@@ -1684,8 +1684,8 @@ export const MOVEMENT_DECK_L1 = [
                   },
                   {
                     pattern: 'Offline consolidation during rest',
-                    description: 'short eyes-closed rest after learning supports memory consolidation — evidence is strongest for verbal and declarative memory, with direct support for motor skill from 15-minute post-practice rest and within-practice micro-rests. Sleep still does more for long-term motor memory, so Savasana is supplement, not substitute. Skip it and you cut practice short before the nervous system settles.',
-                    trains: 'procedural memory consolidation, offline motor learning',
+                    description: 'short eyes-closed rest after practice supports memory consolidation. The body integrates new movement patterns during stillness, not during effort. Skip it and you cut the session short before the nervous system settles.',
+                    trains: 'motor learning, procedural memory consolidation',
                   },
                   {
                     pattern: 'Attentional rest without sleep',

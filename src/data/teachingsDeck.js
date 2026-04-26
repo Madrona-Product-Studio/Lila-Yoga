@@ -608,7 +608,7 @@ export function getTradition(traditionId) {
 
 /** Build flat screen sequence: cover → welcome → convergence → chapters → per principle: [chapter → concepts → cards] → continue */
 export function buildScreens() {
-  const screens = [{ type: 'cover' }, { type: 'welcome' }, { type: 'convergence' }, { type: 'chapters' }];
+  const screens = [{ type: 'cover' }, { type: 'welcome' }, { type: 'convergence' }];
 
   PRINCIPLES.forEach((principle, pi) => {
     const cards = getCardsByPrinciple(principle.id);

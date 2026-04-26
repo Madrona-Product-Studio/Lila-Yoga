@@ -613,6 +613,7 @@ export function buildScreens() {
   PRINCIPLES.forEach((principle, pi) => {
     const cards = getCardsByPrinciple(principle.id);
     screens.push({ type: 'chapter', principle, principleIndex: pi });
+    screens.push({ type: 'concepts', principle, principleIndex: pi });
 
     cards.forEach((card, ci) => {
       screens.push({

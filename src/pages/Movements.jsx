@@ -595,6 +595,23 @@ function GroupTitleScreen({ group, chapter }) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// PRONUNCIATION HELPER
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function pronounce(text) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.rate = 0.8;
+  utterance.pitch = 1.0;
+  utterance.lang = 'hi-IN';
+  const voices = window.speechSynthesis.getVoices();
+  const hindiVoice = voices.find(v => v.lang.startsWith('hi'));
+  if (hindiVoice) utterance.voice = hindiVoice;
+  window.speechSynthesis.speak(utterance);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // CARD SCREEN (two-faced flip card)
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -721,11 +738,31 @@ function CardScreen({ card, group, chapter }) {
                 {/* Sanskrit */}
                 {card.sanskrit && (
                   <div style={{
-                    fontSize: 14, fontFamily: SANS, fontWeight: 300,
-                    color: 'rgba(28,25,23,0.4)',
-                    marginTop: -6, marginBottom: 8,
+                    display: 'flex', alignItems: 'center', gap: 8,
+                    marginTop: -4, marginBottom: 10,
                   }}>
-                    {card.sanskrit}
+                    <div style={{
+                      fontSize: 16, fontFamily: SANS, fontWeight: 400,
+                      color: 'rgba(28,25,23,0.55)',
+                      fontStyle: 'italic',
+                    }}>
+                      {card.sanskrit}
+                    </div>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); pronounce(card.sanskrit); }}
+                      aria-label={`Pronounce ${card.sanskrit}`}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        padding: 2, display: 'flex', alignItems: 'center',
+                        opacity: 0.35,
+                      }}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 5L6 9H2v6h4l5 4V5z" fill="rgba(28,25,23,0.6)" />
+                        <path d="M15.54 8.46a5 5 0 010 7.07" stroke="rgba(28,25,23,0.5)" strokeWidth="1.5" strokeLinecap="round" />
+                        <path d="M18.07 5.93a9 9 0 010 12.14" stroke="rgba(28,25,23,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    </button>
                   </div>
                 )}
 
@@ -773,11 +810,31 @@ function CardScreen({ card, group, chapter }) {
                 {/* Sanskrit */}
                 {card.sanskrit && (
                   <div style={{
-                    fontSize: 14, fontFamily: SANS, fontWeight: 300,
-                    color: 'rgba(255,255,255,0.45)',
-                    marginTop: -6, marginBottom: 8,
+                    display: 'flex', alignItems: 'center', gap: 8,
+                    marginTop: -4, marginBottom: 10,
                   }}>
-                    {card.sanskrit}
+                    <div style={{
+                      fontSize: 16, fontFamily: SANS, fontWeight: 400,
+                      color: 'rgba(255,255,255,0.6)',
+                      fontStyle: 'italic',
+                    }}>
+                      {card.sanskrit}
+                    </div>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); pronounce(card.sanskrit); }}
+                      aria-label={`Pronounce ${card.sanskrit}`}
+                      style={{
+                        background: 'none', border: 'none', cursor: 'pointer',
+                        padding: 2, display: 'flex', alignItems: 'center',
+                        opacity: 0.4,
+                      }}
+                    >
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M11 5L6 9H2v6h4l5 4V5z" fill="rgba(255,255,255,0.6)" />
+                        <path d="M15.54 8.46a5 5 0 010 7.07" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" strokeLinecap="round" />
+                        <path d="M18.07 5.93a9 9 0 010 12.14" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" strokeLinecap="round" />
+                      </svg>
+                    </button>
                   </div>
                 )}
                 {!card.sanskrit && <div style={{ height: 12 }} />}

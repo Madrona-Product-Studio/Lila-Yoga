@@ -46,7 +46,7 @@ const DECKS = [
     route: '/body',
     name: 'Body',
     subtitle: 'Intellectual \u00b7 Scientific',
-    desc: '47 cards on movement science and the body.',
+    desc: '30 cards on movement science and the body.',
     Cover: () => <BodyCover />,
   },
   {

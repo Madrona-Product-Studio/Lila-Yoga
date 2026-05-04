@@ -2,41 +2,26 @@
 
 Four card decks drawn from ancient wisdom traditions — practices for the body, mind, and spirit, grounded in nature.
 
-Part of the [Lila](https://lilatrips.com) family. Sister site to Lila Trips.
+Part of [Madrona Product Studio](https://www.madronaproduct.com). Sister site to [Lila Trips](https://www.lilatrips.com).
 
-## Setup
+## What it is
 
-```bash
-npm install
-npm run dev
-```
+138 cards across four decks, designed as one interconnected system:
 
-Build for production:
+- **Meditations** — 30 practices organized around five principles from wisdom traditions
+- **Movements** — 30 yoga poses as a flowing sequence, plus breathwork
+- **Body** — 47 cards on anatomy and biomechanics
+- **Teachings** — 30 concept cards across six traditions
 
-```bash
-npm run build
-npm run preview
-```
+The decks share vocabulary by design — a concept in Meditations points to its canonical card in Teachings, a practice connects to a pose and a mechanism. The decks resonate with each other rather than talking past each other.
 
 ## Stack
 
-- React 18 + Vite
-- Tailwind CSS v4
-- React Router v6
-- Deployed on Vercel at [lila.yoga](https://lila.yoga)
+- React 18, Vite, Tailwind CSS v4
+- Custom CSS animations (flip, deal-away, stack-lift)
+- No backend — all content is static data shipped in the bundle
+- Deployed on Vercel
 
-## Routes
+## Status
 
-- `/` — Landing page with 4-deck grid
-- `/deck` — 30-card meditation deck (practices)
-- `/teachings` — 30-card teachings deck (concepts by tradition)
-- `/movements` — Movements deck (yoga sequence, L1)
-- `/body` — Lila Body deck (movement science, L2)
-
-## Pending content work
-
-- **Card examples (Meditations)**: All 30 `connection` fields in `src/data/cardDeck.js` currently contain trip-specific examples from Lila Trips (references to Zion, Big Sur, Joshua Tree, etc.). These need to be rewritten for everyday nature context — walks in the park, walking the dog, time in a garden, sitting on a porch. Each field is marked with `// TODO: rewrite for daily-life context`.
-- **Card examples (Teachings)**: The `journey` fields in `src/data/teachingsDeck.js` contain trail/trip-specific language. These should be reviewed and softened for the yoga context.
-- **Landing page copy**: Hero tagline, about section, and CTA text are placeholder. Each is marked with `{/* TODO */}` comments in `src/pages/Landing.jsx`.
-- **Analytics**: Needs its own GA4 property (separate from Lila Trips G-H3TCF22GPL). Placeholder comment in `index.html`.
-
+Live at [lila.yoga](https://lila.yoga) and at [lilatrips.com/practice](https://www.lilatrips.com/practice). Free, no login.
